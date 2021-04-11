@@ -35,7 +35,7 @@ for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 	_timer[? "WAS_RESET"] = false;
 	
 	// Update time_current
-	if (_timerActive && ){
+	if (_timerActive){
 		_timer[? "TIME_CURRENT"] = _clock;
 	}
 	
