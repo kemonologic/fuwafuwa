@@ -57,6 +57,7 @@ var _timerNode = fuwa_ds_tree_build_node_value(			 "TIME_START", _timeStart,
 														 "EASE_CURRENT", 0,
 														 "EASE_INTERVAL", 0,
 														 "SCRIPT", undefined,
+														 "SCRIPT_SCOPE", id,
 														 "REPEAT", false,
 														 "WAS_RESET", false,
 														 "AUTODESTROY", _autoDestroy);

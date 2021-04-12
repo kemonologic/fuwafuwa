@@ -157,8 +157,10 @@ for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 		_timer[? "TIMES_FINISHED"] += 1;
 		
 		// Run script
-		if (!is_undefined(_timer[? "SCRIPT"])){
-			script_execute(_timer[? "SCRIPT"]);
+		if (!is_undefined(_timer[? "SCRIPT"]) && instance_exists(_timer[? "SCRIPT_SCOPE"])){
+			with (_timer[? "SCRIPT_SCOPE"]){
+				script_execute(_timer[? "SCRIPT"]);
+			}
 		}
 		
 		// Reset timer to start time if repeats
