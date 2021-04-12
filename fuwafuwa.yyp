@@ -599,14 +599,6 @@
             }
         },
         {
-            "Key": "bafe3cb3-d2f8-40f1-8a83-674a749f76ca",
-            "Value": {
-                "id": "78c89949-b3a8-49d9-920b-7def1f95a38e",
-                "resourcePath": "scripts\\fuwa_script_execute_ext\\fuwa_script_execute_ext.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "bd5a7fb0-6768-4f40-bf57-7afa740efd69",
             "Value": {
                 "id": "ea16c0e4-4904-4ba9-9851-24836a213541",
@@ -869,7 +861,6 @@
         "5a1504c0-ab02-4b74-b836-8972ca892291",
         "e7fe52ab-fb8a-4886-9670-881ca35a120e",
         "d77ac106-68b4-42c3-8078-0ffd514e1efb",
-        "bafe3cb3-d2f8-40f1-8a83-674a749f76ca",
         "fad43711-cedc-466f-b333-a0b5b4b931f8",
         "4a3cea96-a4a7-4540-b1b8-25b3623fc469",
         "2162f696-62b9-4bfa-b7ad-5607d8c72098",
