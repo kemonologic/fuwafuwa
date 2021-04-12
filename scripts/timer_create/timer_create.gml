@@ -1,8 +1,8 @@
 /// @func timer_create 
+/// @desc {map} Creates a timer and returns a reference.
 /// @arg {real} time
 /// @arg {enum*} unit
-/// @arg {bool*} autoDestroy (default: true)
-/// @desc {map} Creates a timer and returns a reference.
+/// @arg {bool*} autoDestroy
 
 var _time = argument[0];
 var _unit = time_start.ms;
