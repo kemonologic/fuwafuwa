@@ -57,4 +57,3 @@ enum easetype{
 	easeOutBounce,
 	easeInOutBounce
 }
-#endregion 
