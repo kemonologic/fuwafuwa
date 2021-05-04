@@ -24,11 +24,12 @@ for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 	
 	// Check alarm start to update if it's active
 	var _timerStart = timer_get_start(_timer);
+	var _timerEnd = timer_get_end(_timer);
 	var _timerActive = timer_get_active(_timer);
 	
 	var _timerEasetype = timer_get_ease_type(_timer);
 
-	if (!_timerActive && _timerStart <= _clock){
+	if (!_timerActive && _timerStart <= _clock && _timerEnd >= _clock){
 		_timer[? "ACTIVE"] = true;
 	}
 	
@@ -152,7 +153,7 @@ for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 		}
 	}
 	// If finished, wrap up
-	if (timer_check(_timer,true)){
+	if (timer_check(_timer,true) && timer_get_active(_timer)){
 		// Update "finished" count
 		_timer[? "TIMES_FINISHED"] += 1;
 		
@@ -166,6 +167,9 @@ for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 		// Reset timer to start time if repeats
 		if (timer_get_repeat(_timer)){
 			timer_restart(_timer);
+		}
+		else{
+			_timer[? "ACTIVE"] = false;
 		}
 	}
 }
