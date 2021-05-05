@@ -55,5 +55,6 @@ enum easetype{
 	easeInOutBack,
 	easeInBounce,
 	easeOutBounce,
-	easeInOutBounce
+	easeInOutBounce,
+	_SIZE
 }
