@@ -51,6 +51,7 @@ var _timerNode = fuwa_ds_tree_build_node_value(
 														 "TIME_START_INT", _timeStart,
 														 "TIME_CURRENT_INT", _timeCurrent,
 														 "TIME_END_INT", _timeEnd,
+														 "TIME_NORM_INT", 0,
 														 "UPDATE_INT", false,
 														 "TIME_EASE_INTERVAL_NEXT", _timeStart,
 														 "OWNER", id,
