@@ -40,7 +40,7 @@ for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 		_timer[? "TIME_CURRENT"] = _clock;
 	}
 	
-	var _normalizedValue = fuwa_normalize(_timer[? "TIME_CURRENT"], _timer[? "TIME_START"], 
+	_timer[? "TIME_NORM"] = fuwa_normalize(_timer[? "TIME_CURRENT"], _timer[? "TIME_START"], 
 													 _timer[? "TIME_END"]);
 																		
 	// Update ease value
@@ -52,7 +52,7 @@ for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 			case easetype.none: 
 				break;
 			case easetype.linear:
-				_timer[? "EASE_CURRENT"] = _normalizedValue; break;
+				_timer[? "EASE_CURRENT"] = _timer[? "TIME_NORM"]; break;
 			case easetype.percent: 
 				_timer[? "EASE_CURRENT"] = clamp(
 														fuwa_perc( _timer[? "TIME_CURRENT"], 
@@ -61,94 +61,94 @@ for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 														0, 100); break;
 				break;
 			case easetype.easeInQuad:
-				_timer[? "EASE_CURRENT"] = EaseInQuad(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInQuad(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeOutQuad:
-				_timer[? "EASE_CURRENT"] = EaseOutQuad(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseOutQuad(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInOutQuad:
-				_timer[? "EASE_CURRENT"] = EaseInOutQuad(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInOutQuad(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInCubic:
-				_timer[? "EASE_CURRENT"] = EaseInCubic(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInCubic(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeOutCubic:
-				_timer[? "EASE_CURRENT"] = EaseOutCubic(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseOutCubic(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInOutCubic:
-				_timer[? "EASE_CURRENT"] = EaseInOutCubic(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInOutCubic(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInQuart:
-				_timer[? "EASE_CURRENT"] = EaseInQuart(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInQuart(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeOutQuart:
-				_timer[? "EASE_CURRENT"] = EaseOutQuart(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseOutQuart(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInOutQuart:
-				_timer[? "EASE_CURRENT"] = EaseInOutQuart(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInOutQuart(_timer[? "TIME_NORM"], 0, 1, 1);
 				break; 
 			case easetype.easeInQuint:
-				_timer[? "EASE_CURRENT"] = EaseInQuint(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInQuint(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeOutQuint:
-				_timer[? "EASE_CURRENT"] = EaseOutQuint(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseOutQuint(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInOutQuint:
-				_timer[? "EASE_CURRENT"] = EaseInOutQuint(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInOutQuint(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInSine:
-				_timer[? "EASE_CURRENT"] = EaseInSine(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInSine(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeOutSine:
-				_timer[? "EASE_CURRENT"] = EaseOutSine(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseOutSine(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInOutSine:
-				_timer[? "EASE_CURRENT"] = EaseInOutSine(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInOutSine(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInCirc:
-				_timer[? "EASE_CURRENT"] = EaseInCirc(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInCirc(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeOutCirc:
-				_timer[? "EASE_CURRENT"] = EaseOutCirc(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseOutCirc(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInOutCirc:
-				_timer[? "EASE_CURRENT"] = EaseInOutCirc(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInOutCirc(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInExpo:
-				_timer[? "EASE_CURRENT"] = EaseInExpo(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInExpo(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeOutExpo:
-				_timer[? "EASE_CURRENT"] = EaseOutExpo(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseOutExpo(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInOutExpo:
-				_timer[? "EASE_CURRENT"] = EaseInOutExpo(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInOutExpo(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInElastic:
-				_timer[? "EASE_CURRENT"] = EaseInElastic(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInElastic(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeOutElastic:
-				_timer[? "EASE_CURRENT"] = EaseOutElastic(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseOutElastic(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInOutElastic:
-				_timer[? "EASE_CURRENT"] = EaseInOutElastic(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInOutElastic(_timer[? "TIME_NORM"], 0, 1, 1);
 				break; 
 			case easetype.easeInBack:
-				_timer[? "EASE_CURRENT"] = EaseInBack(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInBack(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeOutBack:
-				_timer[? "EASE_CURRENT"] = EaseOutBack(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseOutBack(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInOutBack:
-				_timer[? "EASE_CURRENT"] = EaseInOutBack(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInOutBack(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInBounce:
-				_timer[? "EASE_CURRENT"] = EaseInBounce(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInBounce(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeOutBounce:
-				_timer[? "EASE_CURRENT"] = EaseOutBounce(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseOutBounce(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 			case easetype.easeInOutBounce:
-				_timer[? "EASE_CURRENT"] = EaseInOutBounce(_normalizedValue, 0, 1, 1);
+				_timer[? "EASE_CURRENT"] = EaseInOutBounce(_timer[? "TIME_NORM"], 0, 1, 1);
 				break;
 		}
 	}
