@@ -5,7 +5,7 @@
 /// @arg {bool*} autoDestroy
 
 var _time = argument[0];
-var _unit = time_start.ms;
+var _unit = time.ms;
 var _autoDestroy = true;
 
 if (argument_count > 1){
@@ -20,15 +20,15 @@ var _timerTree = global._fuwa_timerTree;
 var _gameFPS = _FUWA_OPTIONS_FRAMERATE;
 
 switch (_unit){
-	case time_start.s:
+	case time.s:
 		_time *= 1000;
 		_unit = time.ms;
 		break;
-	case time_start.msframes:
-		_time = (_time / 1000) * _gameFPS;
+	case time.msframes:
+		_time = (_time * 0.001) * _gameFPS;
 		_unit = time.frames;
 		break;
-	case time_start.sframes:
+	case time.sframes:
 		_time = _time * _gameFPS;
 		_unit = time.frames;
 		break;

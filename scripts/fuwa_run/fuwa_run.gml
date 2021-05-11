@@ -27,7 +27,7 @@ for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 	// Check alarm start to update if it's active
 	var _timerStart = _timer[? "TIME_START_INT"];
 	var _timerEnd = _timer[? "TIME_END_INT"];
-	var _timerCurrent = _timer[? "TIME_END_INT"];
+	var _timerCurrent = _timer[? "TIME_CURRENT_INT"];
 	var _timerActive = timer_get_active(_timer);
 	
 	var _timerEasetype = timer_get_ease_type(_timer);
@@ -36,12 +36,23 @@ for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 		_timer[? "ACTIVE"] = true;
 	}
 	
+	var _gameFPS = _FUWA_OPTIONS_FRAMERATE;
 	// Update time_current
 	if (_timerActive){
 		_timer[? "TIME_CURRENT_INT"] = _clock;
 	}
 	
-	// TODO - Conversion from internal time_current -> units here
+	switch (_timer[? "UNIT"]){
+		case time.ms:
+		case time.frames:
+			_timer[? "TIME_CURRENT"] = _timer[? "TIME_CURRENT_INT"]; break;
+		case time.s: 
+			_timer[? "TIME_CURRENT"] = (_timer[? "TIME_CURRENT_INT"] * 0.001); break;
+		case time.sframes: 
+			_timer[? "TIME_CURRENT"] = (_timer[? "TIME_CURRENT_INT"] / _FUWA_OPTIONS_FRAMERATE); break;
+		case time.msframes: 
+			_timer[? "TIME_CURRENT"] = ((_timer[? "TIME_CURRENT_INT"] / _FUWA_OPTIONS_FRAMERATE) * 1000); break;
+	}
 	
 	var _normalizedValue = fuwa_normalize(_timer[? "TIME_CURRENT_INT"], _timerStart, 
 													_timerEnd);
