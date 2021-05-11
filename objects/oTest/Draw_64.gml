@@ -4,4 +4,4 @@ draw_text(20,60,"Times finished: " + string(timer_get_numfinished(testTimer)));
 
 var _easeValue = timer_get_ease(testTimer);
 var _windowHeight = window_get_height();
-draw_text(_easeValue * window_get_width(), _windowHeight / 2, currentLetter);
+draw_text(_easeValue * window_get_width(), _windowHeight / 2, currentChar);
