@@ -21,7 +21,7 @@ if (!_timer[? "ACTIVE"]){
 var _timerFinished = false;
 
 // Allow "was reset" for cases where a repeating timer was reset before we could timer_check it.
-_timerFinished = (_timer[? "TIME_END"] <= _timer[? "TIME_CURRENT"]) || _timer[? "WAS_RESET"];  // fix this
+_timerFinished = (_timer[? "TIME_END_INT"] <= _timer[? "TIME_CURRENT_INT"]);
 
 var _destroy = !_suppressDestroy && _timerFinished && timer_get_autodestroy(_timer); 
 

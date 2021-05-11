@@ -14,6 +14,8 @@ if (global.fuwa_lastClearedTimerFrames >= _FUWA_OPTIONS_TIMER_CLEAN_INTERVAL){
 for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 	var _timer = global._fuwa_timerTree[| i];
 	
+	// TODO - Conversion from start/end units to internal here
+	
 	var _timerPaused = timer_get_paused(_timer);
 	if (_timerPaused){
 		continue;
@@ -23,8 +25,9 @@ for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 	var _clock = _isFrameLocked ? fuwa_get_clockframes() : fuwa_get_clocktime();
 	
 	// Check alarm start to update if it's active
-	var _timerStart = timer_get_start(_timer);
-	var _timerEnd = timer_get_end(_timer);
+	var _timerStart = _timer[? "TIME_START_INT"];
+	var _timerEnd = _timer[? "TIME_END_INT"];
+	var _timerCurrent = _timer[? "TIME_END_INT"];
 	var _timerActive = timer_get_active(_timer);
 	
 	var _timerEasetype = timer_get_ease_type(_timer);
@@ -33,18 +36,18 @@ for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 		_timer[? "ACTIVE"] = true;
 	}
 	
-	_timer[? "WAS_RESET"] = false;
-	
 	// Update time_current
 	if (_timerActive){
-		_timer[? "TIME_CURRENT"] = _clock;
+		_timer[? "TIME_CURRENT_INT"] = _clock;
 	}
 	
-	var _normalizedValue = fuwa_normalize(_timer[? "TIME_CURRENT"], _timer[? "TIME_START"], 
-													 _timer[? "TIME_END"]);
+	// TODO - Conversion from internal time_current -> units here
+	
+	var _normalizedValue = fuwa_normalize(_timer[? "TIME_CURRENT_INT"], _timerStart, 
+													_timerEnd);
 																		
 	// Update ease value
-	if (timer_get_ease_interval(_timer) == 0 || (_timer[? "TIME_CURRENT"] > _timer[? "TIME_EASE_INTERVAL_NEXT"])){	
+	if (timer_get_ease_interval(_timer) == 0 || (_timer[? "TIME_CURRENT_INT"] > _timer[? "TIME_EASE_INTERVAL_NEXT"])){	
 		if (timer_get_ease_interval(_timer) > 0){
 			fuwa_timer_update_ease_interval_next(_timer);
 		}
@@ -54,12 +57,7 @@ for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 			case easetype.linear:
 				_timer[? "EASE_CURRENT"] = _normalizedValue; break;
 			case easetype.percent: 
-				_timer[? "EASE_CURRENT"] = clamp(
-														fuwa_perc( _timer[? "TIME_CURRENT"], 
-																_timer[? "TIME_START"], 
-																_timer[? "TIME_END"]),
-														0, 100); break;
-				break;
+				_timer[? "EASE_CURRENT"] = _normalizedValue * 100; break;
 			case easetype.easeInQuad:
 				_timer[? "EASE_CURRENT"] = EaseInQuad(_normalizedValue, 0, 1, 1);
 				break;
