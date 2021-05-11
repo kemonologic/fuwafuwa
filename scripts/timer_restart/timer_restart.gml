@@ -7,8 +7,8 @@ var _timer = argument[0];
 var _clock = fuwa_get_timer_clock(_timer);
 	
 _timer[? "WAS_RESET"] = true;
-var _timerInterval = _timer[? "TIME_END"] - _timer[? "TIME_START"];
-_timer[? "TIME_START"] = _clock;
-_timer[? "TIME_END"] = _clock + _timerInterval;
+var _timerInterval = _timer[? "TIME_END_INT"] - _timer[? "TIME_START_INT"];
+_timer[? "TIME_START_INT"] = _clock;
+_timer[? "TIME_END_INT"] = _clock + _timerInterval;
 _timer[? "ACTIVE"] = true;
 			
