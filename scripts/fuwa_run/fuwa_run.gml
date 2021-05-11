@@ -36,6 +36,8 @@ for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 		_timer[? "ACTIVE"] = true;
 	}
 	
+	_timer[? "WAS_RESET"] = false;
+	
 	var _gameFPS = _FUWA_OPTIONS_FRAMERATE;
 	// Update time_current
 	if (_timerActive){
