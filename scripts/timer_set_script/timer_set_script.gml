@@ -3,7 +3,7 @@
 /// @desc		 Optionally, set the executing instance scope for the script (default: owner)
 /// @arg {map} timer
 /// @arg {script} executeScript
-/// @arg {inst} scopeInstance 
+/// @arg {inst*} scopeInstance 
 
 var _timer = argument[0];
 var _executeScript = argument[1];
