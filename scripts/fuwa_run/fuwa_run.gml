@@ -14,7 +14,38 @@ if (global.fuwa_lastClearedTimerFrames >= _FUWA_OPTIONS_TIMER_CLEAN_INTERVAL){
 for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 	var _timer = global._fuwa_timerTree[| i];
 	
-	// TODO - Conversion from start/end units to internal here
+	// Conversion from start/end units to internal here
+	if (_timer[? "UPDATE_INT"]){
+		show_debug_message("beep");
+		if (_timer[? "TIME_START"] == -1){
+			var _isFrameLocked = timer_get_framelocked(_timer);
+			var _timeStart = _isFrameLocked ? fuwa_get_clockframes() : fuwa_get_clocktime();
+			_timer[? "TIME_START"] = 
+		}
+		
+		switch (_timer[? "UNIT"]){
+			case time.ms:
+			case time.frames:
+				_timer[? "TIME_START_INT"] = _timer[? "TIME_START"];
+				_timer[? "TIME_END_INT"] = _timer[? "TIME_END"]; 
+				break;
+			case time.s: 
+				_timer[? "TIME_START_INT"] = (_timer[? "TIME_START"] * 1000); 
+				_timer[? "TIME_END_INT"] = (_timer[? "TIME_END"] * 1000); 
+				break;
+			case time.sframes: 
+				_timer[? "TIME_START_INT"] = _timer[? "TIME_START"] * _FUWA_OPTIONS_FRAMERATE;
+				_timer[? "TIME_END_INT"] = _timer[? "TIME_END"] * _FUWA_OPTIONS_FRAMERATE;
+				break;
+			case time.msframes: 
+				_timer[? "TIME_START_INT"] = (_timer[? "TIME_START"] * 0.001) * _FUWA_OPTIONS_FRAMERATE;
+				_timer[? "TIME_END_INT"] = (_timer[? "TIME_END"] * 0.001) * _FUWA_OPTIONS_FRAMERATE;
+				break;
+		}
+		show_debug_message(_timer[? "TIME_START_INT"]);
+		show_debug_message(_timer[? "TIME_END_INT"]);
+		_timer[? "UPDATE_INT"] = false;
+	}
 	
 	var _timerPaused = timer_get_paused(_timer);
 	if (_timerPaused){

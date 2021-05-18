@@ -3,4 +3,5 @@
 /// @arg  {map} timer
 
 var _timer = argument[0];
-return (_timer[? "UNIT"] == time.frames);
+var _unit = _timer[? "UNIT"];
+return (_unit == time.frames || _unit == time.msframes || _unit == time.sframes);

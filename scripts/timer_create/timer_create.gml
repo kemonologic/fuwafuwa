@@ -21,20 +21,20 @@ var _gameFPS = _FUWA_OPTIONS_FRAMERATE;
 
 switch (_unit){
 	case time.s:
-		_time *= 1000;
-		_unit = time.ms;
+		//_time *= 1000;
+		//_unit = time.ms;
 		break;
 	case time.msframes:
-		_time = (_time * 0.001) * _gameFPS;
-		_unit = time.frames;
+		//_time = (_time * 0.001) * _gameFPS;
+		//_unit = time.frames;
 		break;
 	case time.sframes:
-		_time = _time * _gameFPS;
-		_unit = time.frames;
+		//_time = _time * _gameFPS;
+		//_unit = time.frames;
 		break;
 }
 
-var _isFrameLocked = (_unit == time.frames);
+var _isFrameLocked = (_unit == time.frames || _unit == time.msframes || _unit == time.sframes);
 
 var _timeStart = 0;
 var _timeEnd = 0;
@@ -44,15 +44,18 @@ _timeStart = _isFrameLocked ? fuwa_get_clockframes() : fuwa_get_clocktime();
 _timeEnd = _timeStart + _time;
 _timeCurrent = _timeStart;
 
+show_debug_message(_timeStart);
+show_debug_message(_timeEnd);
+
 var _timerNode = fuwa_ds_tree_build_node_value(			 
-														 "TIME_START", _timeStart,
-														 "TIME_CURRENT", _timeCurrent,
-														 "TIME_END", _timeEnd,
-														 "TIME_START_INT", _timeStart,
-														 "TIME_CURRENT_INT", _timeCurrent,
-														 "TIME_END_INT", _timeEnd,
+														 "TIME_START", -1,
+														 "TIME_CURRENT", -1,
+														 "TIME_END", _time,
+														 "TIME_START_INT", -1,
+														 "TIME_CURRENT_INT", -1,
+														 "TIME_END_INT", -1,
 														 "TIME_NORM_INT", 0,
-														 "UPDATE_INT", false,
+														 "UPDATE_INT", true,
 														 "TIME_EASE_INTERVAL_NEXT", _timeStart,
 														 "OWNER", id,
 														 "ACTIVE", false,
