@@ -17,6 +17,12 @@ enum time{
 	sframes // s but converted to frames in the timer (framelocked)
 }
 
+enum pingpongtype{
+	none,
+	invertOnEven, // start inverted, normal, then invert again
+	invertOnOdd // start normal, invert, then normal again
+}
+
 enum easetype{
 	none,
 	linear,
