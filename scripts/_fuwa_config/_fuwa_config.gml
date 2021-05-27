@@ -21,7 +21,6 @@ enum easetype{
 	none,
 	linear,
 	percent,
-	percent_osc,
 	easeInQuad,
 	easeOutQuad,
 	easeInOutQuad,
