@@ -7,4 +7,4 @@
 var _timer = argument[0];
 var _offset = argument[1];
 
-_timer[? "TIME_START"] = _timer[? "TIME_START"] + _offset;
+_timer[? "TIME_START"] = _timer[? "TIME_START"] + fuwa_convert_time_tointernal(_timer[? "UNIT"], _offset);

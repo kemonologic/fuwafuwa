@@ -5,7 +5,9 @@
 // ****** OPTIONS ******
 #macro _FUWA_OPTIONS_FRAMERATE game_get_speed(gamespeed_fps) // Game framerate
 #macro _FUWA_OPTIONS_TIMER_CLEAN_INTERVAL 300 // Deactivated timer cleanum interval (in frames) 
-
+#macro _FUWA_OPTIONS_USE_BASE_UNITS false // If enabled, all changes will be made in terms of
+                                           // frames or ms rather than the timer's unit
+										   // e.g. a timer set for 5 seconds will return 5000 duration
 // ****** ENUMS ******
 enum time{
 	frames,

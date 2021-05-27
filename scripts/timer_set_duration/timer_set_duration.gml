@@ -6,6 +6,6 @@
 var _timer = argument[0];
 var _duration = argument[1];
 
-_timer[? "TIME_END"] = _timer[? "TIME_START"] + _duration;
+_timer[? "TIME_END"] = _timer[? "TIME_START"] + fuwa_convert_time_tointernal(_timer[? "UNIT"], _duration);
 
 

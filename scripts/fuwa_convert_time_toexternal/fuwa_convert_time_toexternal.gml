@@ -5,6 +5,10 @@
 var _unit = argument[0];
 var _internalTime = argument[1];
 
+if (_FUWA_OPTIONS_USE_BASE_UNITS){
+	return _internalTime;
+}
+
 switch (_unit){
     case time.ms:
     case time.frames:

@@ -3,4 +3,4 @@
 /// @arg  {map} timer
 
 var _timer = argument[0];
-return _timer[? "TIME_END"];
+return fuwa_convert_time_toexternal(_timer[? "UNIT"], _timer[? "TIME_END"]);
