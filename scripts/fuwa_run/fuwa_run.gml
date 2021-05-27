@@ -169,7 +169,7 @@ for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 			timer_restart(_timer);
 		}
 		else{
-			//_timer[? "ACTIVE"] = false;
+			_timer[? "ACTIVE"] = false;
 		}
 	}
 }

@@ -239,6 +239,14 @@
             }
         },
         {
+            "Key": "3effda98-55f8-4e44-a93d-4ed319a007f1",
+            "Value": {
+                "id": "0f21e080-7e8b-4c75-bee9-1d3861bf135c",
+                "resourcePath": "scripts\\fuwa_convert_time_tointernal\\fuwa_convert_time_tointernal.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4a3cea96-a4a7-4540-b1b8-25b3623fc469",
             "Value": {
                 "id": "f024af99-0b85-48c5-8055-4bb31d7a24fc",
@@ -523,6 +531,14 @@
             "Value": {
                 "id": "8feaa44d-fdb5-4b1d-967d-4920fc65c754",
                 "resourcePath": "scripts\\EaseInOutBack\\EaseInOutBack.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a3dfc229-151d-4d38-8122-3b2646c8e46c",
+            "Value": {
+                "id": "ef2009ac-e61f-4767-af2a-aee18b3f836d",
+                "resourcePath": "scripts\\fuwa_convert_time_toexternal\\fuwa_convert_time_toexternal.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -949,7 +965,9 @@
         "86f9542f-e9c6-4029-bcac-3706d2a97d02",
         "915a2f42-4e14-4dee-91e2-4c486f827672",
         "9a1adc0f-d2da-4110-b8a9-6c4540e49dcf",
-        "e118bdfa-e8d2-48c3-bd13-2d99db8a6221"
+        "e118bdfa-e8d2-48c3-bd13-2d99db8a6221",
+        "a3dfc229-151d-4d38-8122-3b2646c8e46c",
+        "3effda98-55f8-4e44-a93d-4ed319a007f1"
     ],
     "tutorial": ""
 }
