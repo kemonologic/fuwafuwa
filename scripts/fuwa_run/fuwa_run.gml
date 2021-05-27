@@ -23,8 +23,8 @@ for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 	var _clock = _isFrameLocked ? fuwa_get_clockframes() : fuwa_get_clocktime();
 	
 	// Check alarm start to update if it's active
-	var _timerStart = timer_get_start(_timer);
-	var _timerEnd = timer_get_end(_timer);
+	var _timerStart = _timer[? "TIME_START"];
+	var _timerEnd = _timer[? "TIME_END"];
 	var _timerActive = timer_get_active(_timer);
 	
 	var _timerEasetype = timer_get_ease_type(_timer);

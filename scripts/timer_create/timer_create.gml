@@ -5,7 +5,7 @@
 /// @arg {bool*} autoDestroy
 
 var _time = argument[0];
-var _unit = time_start.ms;
+var _unit = time.ms;
 var _autoDestroy = true;
 
 if (argument_count > 1){
@@ -20,21 +20,22 @@ var _timerTree = global._fuwa_timerTree;
 var _gameFPS = _FUWA_OPTIONS_FRAMERATE;
 
 switch (_unit){
-	case time_start.s:
+	case time.s:
 		_time *= 1000;
-		_unit = time.ms;
+		//_unit = time.s;
 		break;
-	case time_start.msframes:
+	case time.msframes:
 		_time = (_time / 1000) * _gameFPS;
-		_unit = time.frames;
+		//_unit = time.frames;
 		break;
-	case time_start.sframes:
+	case time.sframes:
 		_time = _time * _gameFPS;
-		_unit = time.frames;
+		//_unit = time.frames;
 		break;
 }
 
-var _isFrameLocked = (_unit == time.frames);
+
+var _isFrameLocked = (_unit == time.frames) || (_unit == time.sframes) || (_unit == time.msframes);
 
 var _timeStart = 0;
 var _timeEnd = 0;
@@ -48,11 +49,7 @@ var _timerNode = fuwa_ds_tree_build_node_value(
 														 "TIME_START", _timeStart,
 														 "TIME_CURRENT", _timeCurrent,
 														 "TIME_END", _timeEnd,
-														 "TIME_START_INT", _timeStart,
-														 "TIME_CURRENT_INT", _timeCurrent,
-														 "TIME_END_INT", _timeEnd,
 														 "TIME_NORM", 0,
-														 "UPDATE_INT", false,
 														 "TIME_EASE_INTERVAL_NEXT", _timeStart,
 														 "OWNER", id,
 														 "ACTIVE", false,

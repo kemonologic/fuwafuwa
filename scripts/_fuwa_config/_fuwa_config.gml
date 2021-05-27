@@ -17,15 +17,6 @@ enum time{
 	sframes // s but converted to frames in the timer (framelocked)
 }
 
-// Allow different inputs for timer_create that are converted to the above
-enum time_start{
-	frames,
-	ms, // ms (not framelocked, uses current_time)
-	s, // s (not framelocked, uses current_time) and converted to ms in the timer
-	msframes, // ms but converted to frames in the timer (framelocked)
-	sframes // s but converted to frames in the timer (framelocked)
-}
-
 enum easetype{
 	none,
 	linear,
