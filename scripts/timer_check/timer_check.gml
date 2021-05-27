@@ -14,9 +14,9 @@ if (is_undefined(_timer)){
 	return false;
 }
 
-if (!_timer[? "ACTIVE"]){
+/*if (!_timer[? "ACTIVE"]){
 	return false;
-}
+}*/
 
 var _timerFinished = false;
 

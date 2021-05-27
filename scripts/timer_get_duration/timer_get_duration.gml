@@ -3,4 +3,4 @@
 /// @desc {real} Returns total duration of the timer
 
 var _timer = argument[0];
-return (_timer[? "TIME_END"] - _timer[? "TIME_START"]);
+return fuwa_convert_time_toexternal(_timer[? "UNIT"], (_timer[? "TIME_END"] - _timer[? "TIME_START"]));
