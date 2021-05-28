@@ -20,5 +20,5 @@ switch(timer_get_pingpong(_timer)){
 		return (_numFinished % 2 == 0) ? (1 - _value) : _value; break;
 	case pingpongtype.invertOnOdd: 
 		var _numFinished = timer_get_numfinished(_timer);
-		return (_numFinished % 2 == 0) ?  (_value : 1) - _value; break;
+		return (_numFinished % 2 == 0) ?  _value : (1 - _value); break;
 }

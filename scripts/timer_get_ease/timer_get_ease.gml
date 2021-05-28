@@ -12,6 +12,10 @@ if (argument_count > 1){
 
 var _value = _timer[? "EASE_CURRENT"];
 
+if (_value < 0 || _value > 1){
+	show_debug_message("beep" + string(_value));
+}
+
 switch(timer_get_pingpong(_timer)){ 
 	case pingpongtype.none: 
 		return _value; break;
