@@ -1,5 +1,5 @@
 // ****** CONSTANTS ******
-#macro _FUWA_VERSION "0.3.0"
+#macro _FUWA_VERSION "0.3.1"
 #macro _FUWA_EXIT_FAILURE -1
 
 // ****** OPTIONS ******
@@ -15,6 +15,12 @@ enum time{
 	s, // s (not framelocked, uses current_time) and converted to ms in the timer
 	msframes, // ms but converted to frames in the timer (framelocked)
 	sframes // s but converted to frames in the timer (framelocked)
+}
+
+enum pingpongtype{
+	none,
+	invertOnEven, // start inverted, normal, then invert again
+	invertOnOdd // start normal, invert, then normal again
 }
 
 enum easetype{

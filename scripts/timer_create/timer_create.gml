@@ -56,6 +56,7 @@ var _timerNode = fuwa_ds_tree_build_node_value(
 														 "PAUSED", false,
 														 "UNIT", _unit,
 														 "TIMES_FINISHED", 0,
+														 "PINGPONG_TYPE", pingpongtype.none,
 														 "EASE_TYPE", easetype.linear,
 														 "EASE_CURRENT", 0,
 														 "EASE_INTERVAL", 0,

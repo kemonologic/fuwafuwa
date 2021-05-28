@@ -543,6 +543,14 @@
             }
         },
         {
+            "Key": "a0d117c5-7a6e-4bdd-927a-50038eba39a5",
+            "Value": {
+                "id": "0c099165-2b0c-4fdf-90d6-8f54b8f6968b",
+                "resourcePath": "scripts\\timer_get_pingpong\\timer_get_pingpong.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a1166388-cf74-4008-bc3e-904eed3acf80",
             "Value": {
                 "id": "8feaa44d-fdb5-4b1d-967d-4920fc65c754",
@@ -871,6 +879,14 @@
             }
         },
         {
+            "Key": "f69ccb11-7e28-43e4-b847-cbe1920a2960",
+            "Value": {
+                "id": "5c7af48e-99ea-4ec3-a639-93b71dd4932a",
+                "resourcePath": "scripts\\timer_set_pingpong\\timer_set_pingpong.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fad43711-cedc-466f-b333-a0b5b4b931f8",
             "Value": {
                 "id": "e6b979ee-d2b4-4030-bef0-df3d992561f7",
@@ -932,6 +948,8 @@
         "717471f1-b1c9-4530-99a9-ad1ffc758631",
         "3c0b0218-d5a0-4c78-84fd-144e38135e39",
         "13a579dc-71cd-40c1-a1a0-77f8b8fe44f2",
+        "a0d117c5-7a6e-4bdd-927a-50038eba39a5",
+        "f69ccb11-7e28-43e4-b847-cbe1920a2960",
         "e1f21e29-e433-465a-89d0-48e8e3ab87ff",
         "8f5225ad-d9c8-4cb4-b5d0-8ba1d0ad0d0b",
         "5a75559a-6da9-4666-8c7d-4e7853f81b26",

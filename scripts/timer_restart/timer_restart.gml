@@ -10,5 +10,7 @@ _timer[? "WAS_RESET"] = true;
 var _timerInterval = _timer[? "TIME_END"] - _timer[? "TIME_START"];
 _timer[? "TIME_START"] = _clock;
 _timer[? "TIME_END"] = _clock + _timerInterval;
+_timer[? "TIME_NORM"] = 0;
+_timer[? "EASE_CURRENT"] = 0;
 _timer[? "ACTIVE"] = true;
 			
