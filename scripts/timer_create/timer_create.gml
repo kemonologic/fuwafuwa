@@ -77,13 +77,17 @@ if (!ds_map_exists(_instanceMap,id)){
 	_instanceNode = fuwa_ds_tree_build_node_value("INSTANCE",id,"HAS_AUTODESTROY",_autoDestroy);
 	_timerList = ds_list_create();
 	ds_map_add_list(_instanceNode,"TIMER_LIST",_timerList);
+	ds_list_add(_instanceList,_instanceNode);
+	ds_list_mark_as_map(_timerList, ds_list_size(_timerList) - 1);
 	ds_map_add(_instanceMap,id,_instanceNode);
 }
 else{
 	_instanceNode = _instanceMap[? id];
 	_instanceNode[? "HAS_AUTODESTROY"] |= _autoDestroy;
+	_timerList = _instanceNode[? "TIMER_LIST"];
 }
 
+fuwa_assert(!is_undefined(_timerList),"Timer list is undefined");
 ds_list_add(_timerList,_timerNode);
 ds_list_mark_as_map(_timerList, ds_list_size(_timerList) - 1);
 

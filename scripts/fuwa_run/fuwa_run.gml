@@ -15,6 +15,7 @@ if (global.fuwa_lastClearedTimerFrames >= _FUWA_OPTIONS_TIMER_CLEAN_INTERVAL){
 var _instanceListSize = ds_list_size(global._fuwa_instanceList);
 
 for (var h = 0; h < _instanceListSize; h++){
+	
 	var _instanceNode = global._fuwa_instanceList[| h]; 
 
 	var _instanceTimerList = _instanceNode[? "TIMER_LIST"];
