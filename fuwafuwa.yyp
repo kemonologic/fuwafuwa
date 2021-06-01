@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "610ff3cc-1167-40a0-bdc6-bf6e9ff244d1",
+            "Value": {
+                "id": "7d496a44-0b38-489f-9937-e2cb8e1954c4",
+                "resourcePath": "scripts\\fuwa_clean_autodestroy\\fuwa_clean_autodestroy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "63a406b1-45ed-4937-b2e3-b012e5c1c44d",
             "Value": {
                 "id": "413ae5ce-631a-4a70-b9c7-2d0fd2e89e9d",
@@ -1027,6 +1035,7 @@
         "889d8f6d-8525-415b-859d-6dbd1359666f",
         "86f9542f-e9c6-4029-bcac-3706d2a97d02",
         "915a2f42-4e14-4dee-91e2-4c486f827672",
+        "610ff3cc-1167-40a0-bdc6-bf6e9ff244d1",
         "9a1adc0f-d2da-4110-b8a9-6c4540e49dcf",
         "e118bdfa-e8d2-48c3-bd13-2d99db8a6221",
         "a3dfc229-151d-4d38-8122-3b2646c8e46c",
