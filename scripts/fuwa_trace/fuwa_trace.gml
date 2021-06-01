@@ -2,7 +2,7 @@
 /// @arg {any} argument0
 /// @arg {any*} argument1...
 
-var _message = "fuwafuwa: " + argument[1];
+var _message = "fuwafuwa: " + string(argument[0]);
 
 for (var i = 1; i < argument_count; i++){
     _message += ", " + string(argument[i]);
