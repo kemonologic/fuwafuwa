@@ -11,7 +11,7 @@ var _callStackArr = debug_get_callstack();
 var _excludedScripts = ds_list_create();
 
 // Add scripts to exclude here
-ds_list_add(_excludedScripts, "script_called", "fTrace", "show_debug_message");
+ds_list_add(_excludedScripts, "fuwa_script_called","script_called", "fTrace", "show_debug_message");
 
 for (var i = 0; i < array_length_1d(_callStackArr); i++) {
 	var _wasExcluded = false;
