@@ -11,6 +11,8 @@ if (global.fuwa_lastClearedTimerFrames >= _FUWA_OPTIONS_TIMER_CLEAN_INTERVAL){
 	global.fuwa_lastClearedTimerFrames = 0;
 }
 
+
+// Do a check to keep HAS_AUTODESTROY correct
 for (var i = 0; i < ds_list_size(global._fuwa_timerTree); i++){
 	var _timer = global._fuwa_timerTree[| i];
 	

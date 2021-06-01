@@ -431,6 +431,22 @@
             }
         },
         {
+            "Key": "8791160c-42a1-4477-9160-e17d254f696f",
+            "Value": {
+                "id": "d9f14d6a-1685-48a5-955d-7827878fc144",
+                "resourcePath": "scripts\\fuwa_trace\\fuwa_trace.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "87abf225-cdd3-4023-a0dc-0c9b8be16043",
+            "Value": {
+                "id": "3cf1b427-73c0-4827-a26d-64fd2ae4c6d9",
+                "resourcePath": "scripts\\fuwa_script_called\\fuwa_script_called.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "889d8f6d-8525-415b-859d-6dbd1359666f",
             "Value": {
                 "id": "9f0cd6d0-14bc-45a7-885b-6436b5fe4259",
@@ -651,6 +667,14 @@
             "Value": {
                 "id": "297d2d33-9df5-4a94-ae8b-44244e6bf3d9",
                 "resourcePath": "scripts\\EaseInCirc\\EaseInCirc.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "bd025e5b-a40b-4f28-9e9a-30f70bfd9eac",
+            "Value": {
+                "id": "4612bd8e-02bb-44f1-82ad-29663ed464bc",
+                "resourcePath": "scripts\\fuwa_assert\\fuwa_assert.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -967,6 +991,9 @@
         "5a1504c0-ab02-4b74-b836-8972ca892291",
         "e7fe52ab-fb8a-4886-9670-881ca35a120e",
         "d77ac106-68b4-42c3-8078-0ffd514e1efb",
+        "bd025e5b-a40b-4f28-9e9a-30f70bfd9eac",
+        "8791160c-42a1-4477-9160-e17d254f696f",
+        "87abf225-cdd3-4023-a0dc-0c9b8be16043",
         "fad43711-cedc-466f-b333-a0b5b4b931f8",
         "4a3cea96-a4a7-4540-b1b8-25b3623fc469",
         "2162f696-62b9-4bfa-b7ad-5607d8c72098",
