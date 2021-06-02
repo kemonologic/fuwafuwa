@@ -9,7 +9,13 @@ var _unit = time.ms;
 var _autoDestroy = true;
 
 if (argument_count > 1){
-	_unit = argument[1];
+	var _argument = argument[1];
+	if (_argument >= time.frames){
+		_unit = argument[1];
+	}
+	else{
+		_autoDestroy = argument[1];
+	}
 }
 
 if (argument_count > 2){
