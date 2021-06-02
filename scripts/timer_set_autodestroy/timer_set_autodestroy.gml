@@ -6,4 +6,4 @@
 var _timer = argument[0];
 var _autoDestroy = argument[1];
 
-_timer[? "AUTODESTROY"] = _autoDestroy;
+_timer[? "AUTODESTROY"] = _FUWA_OPTIONS_DISABLE_AUTODESTROY ? false : _autoDestroy;
