@@ -22,7 +22,7 @@ for (var h = 0; h < _instanceListSize; h++){
 	
 	var _areAnyTimersAutodestroy = false;
 
-	for (var i = 0; i < ds_list_size(_instanceTimerListSize); i++){
+	for (var i = 0; i < _instanceTimerListSize; i++){
 		var _timer = _instanceTimerList[| i];
 		
 		var _timerPaused = timer_get_paused(_timer);
