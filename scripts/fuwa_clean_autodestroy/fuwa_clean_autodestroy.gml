@@ -7,7 +7,7 @@ var _instanceList = global._fuwa_instanceList;
 // Prune list of destroyed instances backwards to avoid skipping as we are deleting in-place
 for (var i = ds_list_size(_instanceList) - 1; i >= 0; i--){
 	var _instanceNode = _instanceList[| i];
-	if (!_instanceNode[? "HAS_AUTODESTROY"]){
+	if (!_instanceNode[? "MIXED_AUTODESTROY"]){
 		continue;
 	}
 	

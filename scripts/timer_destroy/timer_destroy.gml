@@ -26,5 +26,9 @@ if (ds_list_empty(_ownerTimerList)){
 	ds_map_delete(global._fuwa_instanceMap,_owner);
 }
 
+// Destroying a non-autodestroy timer might affect the node's autodestroy status
+// But rescanning would negate the performance difference anyway (since worst-case is looping through)
+// And it's likely to be taken care of on the next fuwa_run step
+
 // Destroy timer, as it was dereferenced earlier
 ds_map_destroy(_timer);
