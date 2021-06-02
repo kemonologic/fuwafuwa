@@ -20,7 +20,7 @@ for (var h = 0; h < _instanceListSize; h++){
 	var _instanceTimerList = _instanceNode[? "TIMER_LIST"];
 	var _instanceTimerListSize = ds_list_size(_instanceTimerList);
 	
-	var _areAnyTimersManualDestroy = false;
+	var _numAutoDestroyTimers = 0;
 
 	for (var i = 0; i < _instanceTimerListSize; i++){
 		var _timer = _instanceTimerList[| i];
@@ -39,7 +39,7 @@ for (var h = 0; h < _instanceListSize; h++){
 			_timer[? "ACTIVE"] = true;
 		}
 		
-		_areAnyTimersManualDestroy |= !_timer[? "AUTODESTROY"];
+		_numAutoDestroyTimers += _timer[? "AUTODESTROY"];
 		
 		if (_timerPaused || !_timerActive){
 			continue;
@@ -185,5 +185,5 @@ for (var h = 0; h < _instanceListSize; h++){
 		}		
 		
 	}
-	_instanceNode[? "MIXED_AUTODESTROY"] = _areAnyTimersManualDestroy;
+	_instanceNode[? "NUM_AUTODESTROY"] = _numAutoDestroyTimers;
 }

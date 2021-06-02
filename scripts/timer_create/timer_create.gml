@@ -84,7 +84,7 @@ var _timerNode = fuwa_ds_tree_build_node_value(
 var _instanceNode = undefined;
 var _timerList = undefined;
 if (!ds_map_exists(_instanceMap,id)){
-	_instanceNode = fuwa_ds_tree_build_node_value("INSTANCE",id,"MIXED_AUTODESTROY",!_autoDestroy);
+	_instanceNode = fuwa_ds_tree_build_node_value("INSTANCE",id,"NUM_AUTODESTROY",_autoDestroy);
 	_timerList = ds_list_create();
 	ds_map_add_list(_instanceNode,"TIMER_LIST",_timerList);
 	ds_list_add(_instanceList,_instanceNode);
@@ -93,7 +93,7 @@ if (!ds_map_exists(_instanceMap,id)){
 }
 else{
 	_instanceNode = _instanceMap[? id];
-	_instanceNode[? "MIXED_AUTODESTROY"] |= !_autoDestroy;
+	_instanceNode[? "NUM_AUTODESTROY"] += _autoDestroy;
 	_timerList = _instanceNode[? "TIMER_LIST"];
 }
 
