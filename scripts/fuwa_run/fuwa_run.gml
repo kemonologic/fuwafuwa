@@ -7,7 +7,7 @@ global.fuwa_lastClearedTimerFrames++;
 
 
 // Periodically check autodestroy timers' instances, if no longer exist prune branch and remove map key
-if (global.fuwa_lastClearedTimerFrames >= _FUWA_OPTIONS_TIMER_CLEAN_INTERVAL){
+if (!_FUWA_OPTIONS_DISABLE_AUTODESTROY && global.fuwa_lastClearedTimerFrames >= _FUWA_OPTIONS_TIMER_CLEAN_INTERVAL){
 	fuwa_clean_autodestroy();
 	global.fuwa_lastClearedTimerFrames = 0;
 }

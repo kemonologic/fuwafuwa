@@ -22,6 +22,10 @@ if (argument_count > 2){
 	_autoDestroy = argument[2];
 }
 
+if (_FUWA_OPTIONS_DISABLE_AUTODESTROY){
+	_autoDestroy = false;
+}
+
 //var _timerTree = global._fuwa_timerTree;
 var _instanceList = global._fuwa_instanceList;
 var _instanceMap = global._fuwa_instanceMap;
