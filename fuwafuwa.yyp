@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "610ff3cc-1167-40a0-bdc6-bf6e9ff244d1",
+            "Value": {
+                "id": "7d496a44-0b38-489f-9937-e2cb8e1954c4",
+                "resourcePath": "scripts\\fuwa_clean_autodestroy\\fuwa_clean_autodestroy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "63a406b1-45ed-4937-b2e3-b012e5c1c44d",
             "Value": {
                 "id": "413ae5ce-631a-4a70-b9c7-2d0fd2e89e9d",
@@ -431,6 +439,22 @@
             }
         },
         {
+            "Key": "8791160c-42a1-4477-9160-e17d254f696f",
+            "Value": {
+                "id": "d9f14d6a-1685-48a5-955d-7827878fc144",
+                "resourcePath": "scripts\\fuwa_trace\\fuwa_trace.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "87abf225-cdd3-4023-a0dc-0c9b8be16043",
+            "Value": {
+                "id": "3cf1b427-73c0-4827-a26d-64fd2ae4c6d9",
+                "resourcePath": "scripts\\fuwa_script_called\\fuwa_script_called.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "889d8f6d-8525-415b-859d-6dbd1359666f",
             "Value": {
                 "id": "9f0cd6d0-14bc-45a7-885b-6436b5fe4259",
@@ -460,14 +484,6 @@
                 "id": "050479c0-5dd0-435f-8480-91df5e699d55",
                 "resourcePath": "views\\90a5074b-810f-44fe-90b3-c0f08035bfcd.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "915a2f42-4e14-4dee-91e2-4c486f827672",
-            "Value": {
-                "id": "ad6f9e9a-e463-4741-954a-752ba19644a5",
-                "resourcePath": "scripts\\fuwa_clean_deactivated\\fuwa_clean_deactivated.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -655,6 +671,14 @@
             }
         },
         {
+            "Key": "bd025e5b-a40b-4f28-9e9a-30f70bfd9eac",
+            "Value": {
+                "id": "4612bd8e-02bb-44f1-82ad-29663ed464bc",
+                "resourcePath": "scripts\\fuwa_assert\\fuwa_assert.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bd5a7fb0-6768-4f40-bf57-7afa740efd69",
             "Value": {
                 "id": "ea16c0e4-4904-4ba9-9851-24836a213541",
@@ -764,14 +788,6 @@
                 "id": "e0b67b38-c910-4036-8646-6272b0f4d059",
                 "resourcePath": "views\\dbd7dab9-ed28-4443-980c-f4c1d20fbd44.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "e118bdfa-e8d2-48c3-bd13-2d99db8a6221",
-            "Value": {
-                "id": "9f9bb4a4-8bcb-4ab6-93d6-4cc2a8367597",
-                "resourcePath": "scripts\\fuwa_timer_deactivate\\fuwa_timer_deactivate.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -967,6 +983,9 @@
         "5a1504c0-ab02-4b74-b836-8972ca892291",
         "e7fe52ab-fb8a-4886-9670-881ca35a120e",
         "d77ac106-68b4-42c3-8078-0ffd514e1efb",
+        "bd025e5b-a40b-4f28-9e9a-30f70bfd9eac",
+        "8791160c-42a1-4477-9160-e17d254f696f",
+        "87abf225-cdd3-4023-a0dc-0c9b8be16043",
         "fad43711-cedc-466f-b333-a0b5b4b931f8",
         "4a3cea96-a4a7-4540-b1b8-25b3623fc469",
         "2162f696-62b9-4bfa-b7ad-5607d8c72098",
@@ -999,9 +1018,8 @@
         "74ad33fc-056f-4a0a-bdf3-646c51c98285",
         "889d8f6d-8525-415b-859d-6dbd1359666f",
         "86f9542f-e9c6-4029-bcac-3706d2a97d02",
-        "915a2f42-4e14-4dee-91e2-4c486f827672",
+        "610ff3cc-1167-40a0-bdc6-bf6e9ff244d1",
         "9a1adc0f-d2da-4110-b8a9-6c4540e49dcf",
-        "e118bdfa-e8d2-48c3-bd13-2d99db8a6221",
         "a3dfc229-151d-4d38-8122-3b2646c8e46c",
         "3effda98-55f8-4e44-a93d-4ed319a007f1"
     ],

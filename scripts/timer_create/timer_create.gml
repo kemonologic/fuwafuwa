@@ -9,14 +9,27 @@ var _unit = time.ms;
 var _autoDestroy = true;
 
 if (argument_count > 1){
-	_unit = argument[1];
+	var _argument = argument[1];
+	if (_argument >= time.frames){
+		_unit = argument[1];
+	}
+	else{
+		_autoDestroy = argument[1];
+	}
 }
 
 if (argument_count > 2){
 	_autoDestroy = argument[2];
 }
 
-var _timerTree = global._fuwa_timerTree;
+if (_FUWA_OPTIONS_DISABLE_AUTODESTROY){
+	_autoDestroy = false;
+}
+
+//var _timerTree = global._fuwa_timerTree;
+var _instanceList = global._fuwa_instanceList;
+var _instanceMap = global._fuwa_instanceMap;
+
 var _gameFPS = _FUWA_OPTIONS_FRAMERATE;
 
 switch (_unit){
@@ -66,6 +79,26 @@ var _timerNode = fuwa_ds_tree_build_node_value(
 														 "WAS_RESET", false,
 														 "AUTODESTROY", _autoDestroy);
 								 
-ds_list_add(_timerTree,_timerNode); // don't add as map as we may transfer the references
+
+
+var _instanceNode = undefined;
+var _timerList = undefined;
+if (!ds_map_exists(_instanceMap,id)){
+	_instanceNode = fuwa_ds_tree_build_node_value("INSTANCE",id,"NUM_AUTODESTROY",_autoDestroy);
+	_timerList = ds_list_create();
+	ds_map_add_list(_instanceNode,"TIMER_LIST",_timerList);
+	ds_list_add(_instanceList,_instanceNode);
+	ds_list_mark_as_map(_timerList, ds_list_size(_timerList) - 1);
+	ds_map_add(_instanceMap,id,_instanceNode);
+}
+else{
+	_instanceNode = _instanceMap[? id];
+	_instanceNode[? "NUM_AUTODESTROY"] += _autoDestroy;
+	_timerList = _instanceNode[? "TIMER_LIST"];
+}
+
+fuwa_assert(!is_undefined(_timerList),"Timer list is undefined");
+ds_list_add(_timerList,_timerNode);
+ds_list_mark_as_map(_timerList, ds_list_size(_timerList) - 1);
 
 return _timerNode;

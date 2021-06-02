@@ -4,17 +4,18 @@
 
 // ****** OPTIONS ******
 #macro _FUWA_OPTIONS_FRAMERATE game_get_speed(gamespeed_fps) // Game framerate
-#macro _FUWA_OPTIONS_TIMER_CLEAN_INTERVAL 300 // Deactivated timer cleanum interval (in frames) 
+#macro _FUWA_OPTIONS_TIMER_CLEAN_INTERVAL 300 // Autodestroy timer cleanum interval (in frames) 
+#macro _FUWA_OPTIONS_DISABLE_AUTODESTROY false // Autodestroy timer cleanum interval (in frames) 
 #macro _FUWA_OPTIONS_USE_BASE_UNITS false // If enabled, all changes will be made in terms of
                                            // frames or ms rather than the timer's unit
 										   // e.g. a timer set for 5 seconds will return 5000 duration
 // ****** ENUMS ******
-enum time{
-	frames,
-	ms, // ms (not framelocked, uses current_time)
-	s, // s (not framelocked, uses current_time) and converted to ms in the timer
-	msframes, // ms but converted to frames in the timer (framelocked)
-	sframes // s but converted to frames in the timer (framelocked)
+enum time{ // use high values so we can differentiate from boolean in timer_create
+	frames = 1000,
+	ms = 1001, // ms (not framelocked, uses current_time)
+	s = 1002, // s (not framelocked, uses current_time) and converted to ms in the timer
+	msframes = 1003, // ms but converted to frames in the timer (framelocked)
+	sframes = 1004 // s but converted to frames in the timer (framelocked)
 }
 
 enum pingpongtype{
