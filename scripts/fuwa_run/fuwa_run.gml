@@ -15,9 +15,8 @@ if (global.fuwa_lastClearedTimerFrames >= _FUWA_OPTIONS_TIMER_CLEAN_INTERVAL){
 var _instanceListSize = ds_list_size(global._fuwa_instanceList);
 
 for (var h = 0; h < _instanceListSize; h++){
-	
 	var _instanceNode = global._fuwa_instanceList[| h]; 
-
+	//fuwa_assert(!is_undefined(_instanceNode),"Instance node is in the list, but undefined.");
 	var _instanceTimerList = _instanceNode[? "TIMER_LIST"];
 	var _instanceTimerListSize = ds_list_size(_instanceTimerList);
 	
@@ -27,37 +26,34 @@ for (var h = 0; h < _instanceListSize; h++){
 		var _timer = _instanceTimerList[| i];
 		
 		var _timerPaused = timer_get_paused(_timer);
+		var _timerActive = timer_get_active(_timer);	
 		
-		_areAnyTimersAutodestroy |= _timer[? "AUTODESTROY"];
-		
-		if (_timerPaused){
-			continue;
-		}
-	
 		var _isFrameLocked = timer_get_framelocked(_timer);
 		var _clock = _isFrameLocked ? fuwa_get_clockframes() : fuwa_get_clocktime();
-	
+		
 		// Check alarm start to update if it's active
 		var _timerStart = _timer[? "TIME_START"];
 		var _timerEnd = _timer[? "TIME_END"];
-		var _timerActive = timer_get_active(_timer);
-	
-		var _timerEasetype = timer_get_ease_type(_timer);
 
 		if (!_timerActive && _timerStart <= _clock && _timerEnd >= _clock){
 			_timer[? "ACTIVE"] = true;
 		}
-	
-		_timer[? "WAS_RESET"] = false;
-	
-		// Update time_current
-		if (_timerActive){
-			_timer[? "TIME_CURRENT"] = _clock;
+		
+		_areAnyTimersAutodestroy |= _timer[? "AUTODESTROY"];
+		
+		if (_timerPaused || !_timerActive){
+			continue;
 		}
-	
+		
+		// Active timer, so update
+		_timer[? "WAS_RESET"] = false;
+
+		// Update current time
+		_timer[? "TIME_CURRENT"] = _clock;
 		_timer[? "TIME_NORM"] = fuwa_normalize(_timer[? "TIME_CURRENT"], _timer[? "TIME_START"], 
 														 _timer[? "TIME_END"]);
-																		
+																			
+		var _timerEasetype = timer_get_ease_type(_timer);
 		// Update ease value
 		if (timer_get_ease_interval(_timer) == 0 || (_timer[? "TIME_CURRENT"] > _timer[? "TIME_EASE_INTERVAL_NEXT"])){	
 			if (timer_get_ease_interval(_timer) > 0){

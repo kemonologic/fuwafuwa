@@ -26,7 +26,7 @@ _timerFinished = (_timer[? "TIME_END"] <= _timer[? "TIME_CURRENT"]) || _timer[? 
 var _destroy = !_suppressDestroy && _timerFinished && timer_get_autodestroy(_timer); 
 
 if (_destroy){
-	fuwa_timer_deactivate(_timer);
+	timer_destroy(_timer);
 }
 
 return _timerFinished;
