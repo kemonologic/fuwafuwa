@@ -16,6 +16,5 @@ for (var i = ds_list_size(_instanceList) - 1; i >= 0; i--){
 		ds_map_destroy(_instanceNode); // Prune branch and timers underneath
 		ds_map_delete(_instanceMap,_instanceID); // Remove map entry
 		ds_list_delete(_instanceList,i);
-
 	}
 }
