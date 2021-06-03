@@ -86,7 +86,7 @@ var _timerNode = fuwa_ds_tree_build_node_value(
 														 "SCRIPT_SCOPE", id,
 														 "REPEAT", false,
 														 "SEQUENCE", _sequence,
-														 "WAS_RESET", false,
+														 "RESTARTED_THIS_FRAME", false,
 														 "AUTODESTROY", _autoDestroy);
 								 
 

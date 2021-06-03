@@ -20,7 +20,6 @@ else{
 }
 
 _timerInterval = fuwa_convert_time_tointernal(_timer[? "UNIT"], _timerInterval); 
-_timer[? "WAS_RESET"] = true;
 
 _timer[? "TIME_START"] = _clock;
 _timer[? "TIME_END"] = _clock + _timerInterval;

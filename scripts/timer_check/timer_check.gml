@@ -15,6 +15,6 @@ if (is_undefined(_timer)){
 var _timerFinished = false;
 
 // Allow "was reset" for cases where a repeating timer was reset before we could timer_check it.
-_timerFinished = (_timer[? "TIME_END"] <= _timer[? "TIME_CURRENT"]) || _timer[? "WAS_RESET"];  // fix this
+_timerFinished = (_timer[? "TIME_END"] <= _timer[? "TIME_CURRENT"]) || _timer[? "RESTARTED_THIS_FRAME"];  // fix this
 
 return _timerFinished;
