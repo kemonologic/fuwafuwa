@@ -1,13 +1,22 @@
 /// @func timer_create 
 /// @desc {map} Creates a timer and returns a reference.
-/// @arg {real} time
+/// @arg {real/arr} time
 /// @arg {enum*} unit
 /// @arg {bool*} autoDestroy
 
 var _time = argument[0];
 var _unit = time.ms;
 var _autoDestroy = true;
+var _sequence = [];
 
+if (is_array(_time)){ // sequence
+	_sequence = _time;
+	_time = _sequence[0];
+}
+else{
+	_sequence[0] = _time;
+}
+	
 if (argument_count > 1){
 	var _argument = argument[1];
 	if (_argument >= time.frames){
@@ -76,7 +85,8 @@ var _timerNode = fuwa_ds_tree_build_node_value(
 														 "SCRIPT", undefined,
 														 "SCRIPT_SCOPE", id,
 														 "REPEAT", false,
-														 "WAS_RESET", false,
+														 "SEQUENCE", _sequence,
+														 "RESTARTED_THIS_FRAME", false,
 														 "AUTODESTROY", _autoDestroy);
 								 
 
