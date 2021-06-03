@@ -1,7 +1,6 @@
 /// @func timer_check
 /// @desc {bool} Checks to see if a timer has elapsed. If autodestroy and true, destroys the timer.
 /// @arg {map} timer
-/// @arg {bool*} suppressDestroy
 
 var _timer = argument[0];
 

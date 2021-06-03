@@ -1,12 +1,18 @@
 /// @func timer_get_sequence_duration
 /// @arg {map} timer
-/// @arg {real} nodeIndex
-/// @desc Get the given node in the sequence's duration.
+/// @desc Get the total sequence duration for the timer.
 
 var _timer = argument[0];
-var _nodeIndex = argument[1];
 
+if (timer_get_sequence_size(_timer) == 0){
+	return _FUWA_EXIT_FAILURE;
+}
 
+var _total = 0;
 var _sequence = _timer[? "SEQUENCE"];
 
-return (_nodeIndex >= timer_get_sequence_size(_timer)) ? _FUWA_EXIT_FAILURE : _sequence[_nodeIndex];
+for (var i = 0; i < array_length_1d(_sequence); i++){
+	_total += _sequence[i];
+}
+
+return _total;
