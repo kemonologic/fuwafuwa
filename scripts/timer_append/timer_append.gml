@@ -10,5 +10,7 @@ var _sequence = _timer[? "SEQUENCE"];
 var _sequenceSize = timer_get_sequence_size(_timer);
 
 for (var i = 1; i < argument_count; i++){
-    _timer[_sequenceSize + (i - 1)] = real(argument[i]);
+    _sequence[_sequenceSize + (i - 1)] = real(argument[i]);
 }
+
+_timer[? "SEQUENCE"] = _sequence;

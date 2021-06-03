@@ -1,6 +1,6 @@
 /// @func timer_create 
 /// @desc {map} Creates a timer and returns a reference.
-/// @arg {real} time/sequence
+/// @arg {real/arr} time
 /// @arg {enum*} unit
 /// @arg {bool*} autoDestroy
 

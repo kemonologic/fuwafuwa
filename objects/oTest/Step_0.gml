@@ -7,3 +7,6 @@ if (timer_check(testTimer)){
 	} until (currentEaseAlgorithm != easetype.percent);
 	timer_set_ease_type(testTimer,currentEaseAlgorithm);
 }
+
+
+

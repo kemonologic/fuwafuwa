@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "38a3c281-e72e-412d-8d4c-16bc07080c6e",
+            "Value": {
+                "id": "527eb25c-5ec1-4940-a0f0-8e2f124b7105",
+                "resourcePath": "scripts\\timer_check_sequence\\timer_check_sequence.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3af8700d-65e6-4817-8062-25bb30d3d8e5",
             "Value": {
                 "id": "096a8a83-9301-4829-95b4-edb22629f560",
@@ -979,6 +987,7 @@
         "76157cf1-318b-4a89-8b0d-510f40dd201d",
         "b184e103-1a1f-4afd-a222-aa79a0752b40",
         "0e421fcc-e9d6-4344-8c80-8785aa15eab1",
+        "38a3c281-e72e-412d-8d4c-16bc07080c6e",
         "311c4e55-a1a8-47b2-85ad-100630fda2be",
         "fe2586df-acf3-4977-bfa5-082a409b73fe",
         "96af2fe7-43f9-4091-a10c-741a9073ae57",
