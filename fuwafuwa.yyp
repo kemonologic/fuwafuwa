@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "6230c376-9051-44fb-8532-3d63ad9a0f4b",
+            "Value": {
+                "id": "a8778c0b-4bb3-4efe-866e-80ce2644b758",
+                "resourcePath": "scripts\\timer_get_sequence_duration_total\\timer_get_sequence_duration_total.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "63a406b1-45ed-4937-b2e3-b012e5c1c44d",
             "Value": {
                 "id": "413ae5ce-631a-4a70-b9c7-2d0fd2e89e9d",
@@ -515,6 +523,14 @@
             "Value": {
                 "id": "efb9979c-c503-4c9a-b154-a7cb62d3bffd",
                 "resourcePath": "scripts\\EaseOutQuad\\EaseOutQuad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "985f60f4-221d-4367-bbf5-81334e867fd9",
+            "Value": {
+                "id": "e370164c-b264-4ce0-b580-d1bb315eae1a",
+                "resourcePath": "scripts\\timer_get_sequence_size\\timer_get_sequence_size.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -735,6 +751,14 @@
             }
         },
         {
+            "Key": "c68153eb-8588-4f05-8630-63c2c22bc74c",
+            "Value": {
+                "id": "4c67afa7-b4e4-4429-ad0c-68d7c9a0212b",
+                "resourcePath": "scripts\\timer_get_sequence_duration\\timer_get_sequence_duration.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c6844b00-d28c-4e37-8a4f-f8625eb22672",
             "Value": {
                 "id": "8af9ed06-9f25-4080-b414-824f20e4a0d3",
@@ -788,6 +812,14 @@
                 "id": "e0b67b38-c910-4036-8646-6272b0f4d059",
                 "resourcePath": "views\\dbd7dab9-ed28-4443-980c-f4c1d20fbd44.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "dd52d432-eeae-4dca-9de9-90eae7cc2d1c",
+            "Value": {
+                "id": "65a7b6de-bad3-4b5b-9c3a-3a7296b88ccb",
+                "resourcePath": "scripts\\timer_append\\timer_append.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -950,6 +982,7 @@
         "311c4e55-a1a8-47b2-85ad-100630fda2be",
         "fe2586df-acf3-4977-bfa5-082a409b73fe",
         "96af2fe7-43f9-4091-a10c-741a9073ae57",
+        "dd52d432-eeae-4dca-9de9-90eae7cc2d1c",
         "7c073893-3c2a-46c8-85c3-28b483f5ceff",
         "53677c11-f2c1-48fc-8f80-b7bbe46338d9",
         "98610839-fb9c-4705-a41e-a439f57ea6ea",
@@ -966,6 +999,9 @@
         "13a579dc-71cd-40c1-a1a0-77f8b8fe44f2",
         "a0d117c5-7a6e-4bdd-927a-50038eba39a5",
         "f69ccb11-7e28-43e4-b847-cbe1920a2960",
+        "985f60f4-221d-4367-bbf5-81334e867fd9",
+        "c68153eb-8588-4f05-8630-63c2c22bc74c",
+        "6230c376-9051-44fb-8532-3d63ad9a0f4b",
         "e1f21e29-e433-465a-89d0-48e8e3ab87ff",
         "8f5225ad-d9c8-4cb4-b5d0-8ba1d0ad0d0b",
         "5a75559a-6da9-4666-8c7d-4e7853f81b26",
