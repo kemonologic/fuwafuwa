@@ -19,6 +19,7 @@ else{
 	_timerInterval = _sequence[_numFinished]; // Use next node in sequence
 }
 
+_timerInterval = fuwa_convert_time_tointernal(_timer[? "UNIT"], _timerInterval); 
 _timer[? "WAS_RESET"] = true;
 
 _timer[? "TIME_START"] = _clock;
