@@ -1,6 +1,6 @@
 /// @func timer_get_sequence_duration
+/// @desc {real} Get the total sequence duration for the timer.
 /// @arg {map} timer
-/// @desc Get the total sequence duration for the timer.
 
 var _timer = argument[0];
 

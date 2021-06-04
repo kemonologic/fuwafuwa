@@ -1,7 +1,7 @@
 /// @func timer_get_sequence_duration_atpos
+/// @desc {real} Get the given node in the sequence's duration.
 /// @arg {map} timer
 /// @arg {real} nodePos
-/// @desc Get the given node in the sequence's duration.
 
 var _timer = argument[0];
 var _nodePos = argument[1];
