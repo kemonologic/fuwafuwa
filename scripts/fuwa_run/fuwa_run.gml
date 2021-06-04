@@ -173,8 +173,10 @@ for (var h = 0; h < _instanceListSize; h++){
 			
 			var _curNode = _timer[? "SEQUENCE_NODE_CURRENT"];
 			_sequence[@ _curNode,fuwasequence.completed] = true;
+			_timer[? "SEQUENCE_NODE_LAST"] = _timer[? "SEQUENCE_NODE_CURRENT"];
 			_timer[? "SEQUENCE_NODE_CURRENT"] = min(timer_get_sequence_size(_timer) - 1,
 													_curNode + 1);
+													
 		
 			// Run script
 			if (!is_undefined(_timer[? "SCRIPT"]) && instance_exists(_timer[? "SCRIPT_SCOPE"])){

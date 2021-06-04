@@ -5,9 +5,18 @@
 var _timer = argument[0];
 var _sequence = _timer[? "SEQUENCE"];
 var _completedNodes = 0;
+var _size = array_height_2d(_sequence);
 
-for (var i = 0; i < array_height_2d(_sequence); i++){
+for (var i = 0; i < _size; i++){
 	_completedNodes += _sequence[i, fuwasequence.completed];
+	// allow one-frame fire for restarted timer
+	// if we're checking the current node, the last node was also the current one, and we repeated, add +1
+	if  (i == (_size - 1) && 
+		 i == _timer[? "SEQUENCE_NODE_LAST"] && 
+		 i == _timer[? "SEQUENCE_NODE_CURRENT"] && 
+		 _sequence[i, fuwasequence.completed] == false){ 
+			 _completedNodes += _timer[? "RESTARTED_THIS_FRAME"]; // allow it to fire on the restart frame
+	}
 }
 
-return _completedNodes == array_height_2d(_sequence);
+return (_completedNodes == _size);

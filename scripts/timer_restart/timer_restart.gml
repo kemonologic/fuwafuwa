@@ -21,3 +21,4 @@ _timer[? "TIME_NORM"] = 0;
 _timer[? "EASE_CURRENT"] = 0;
 _timer[? "ACTIVE"] = true;
 			
+_sequence[@ _currentNode, fuwasequence.completed] = false;
