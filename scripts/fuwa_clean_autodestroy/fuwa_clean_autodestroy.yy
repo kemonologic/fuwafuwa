@@ -1,8 +1,8 @@
 {
-    "id": "e118bdfa-e8d2-48c3-bd13-2d99db8a6221",
+    "id": "610ff3cc-1167-40a0-bdc6-bf6e9ff244d1",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "fuwa_timer_deactivate",
+    "name": "fuwa_clean_autodestroy",
     "IsCompatibility": false,
     "IsDnD": false
 }

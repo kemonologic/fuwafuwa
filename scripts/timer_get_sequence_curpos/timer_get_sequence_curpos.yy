@@ -1,8 +1,8 @@
 {
-    "id": "915a2f42-4e14-4dee-91e2-4c486f827672",
+    "id": "c80b8f84-44d0-4cf9-80a1-85adf8ceac3a",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "fuwa_clean_deactivated",
+    "name": "timer_get_sequence_curpos",
     "IsCompatibility": false,
     "IsDnD": false
 }

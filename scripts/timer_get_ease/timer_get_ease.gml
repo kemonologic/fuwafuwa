@@ -12,6 +12,10 @@ if (argument_count > 1){
 
 var _value = _timer[? "EASE_CURRENT"];
 
+if (_overridePingpong){
+	return _value;
+}
+
 switch(timer_get_pingpong(_timer)){ 
 	case pingpongtype.none: 
 		return _value; break;
