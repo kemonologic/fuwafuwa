@@ -89,6 +89,7 @@ var _timerNode = fuwa_ds_tree_build_node_value(
 														 "EASE_INTERVAL", 0,
 														 "SCRIPT", undefined,
 														 "SCRIPT_SCOPE", id,
+														 "SCRIPT_ARGUMENTS", [],
 														 "REPEAT", false,
 														 "SEQUENCE", _sequence,
 														 "SEQUENCE_NODE_CURRENT", 0,
