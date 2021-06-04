@@ -10,7 +10,8 @@ var _sequence = _timer[? "SEQUENCE"];
 var _sequenceSize = timer_get_sequence_size(_timer);
 
 for (var i = 1; i < argument_count; i++){
-    _sequence[_sequenceSize + (i - 1)] = real(argument[i]);
+    _sequence[_sequenceSize + (i - 1),fuwasequence.duration] = real(argument[i]);
+    _sequence[_sequenceSize + (i - 1),fuwasequence.completed] = false;
 }
 
 _timer[? "SEQUENCE"] = _sequence;

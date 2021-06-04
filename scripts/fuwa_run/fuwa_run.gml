@@ -164,9 +164,17 @@ for (var h = 0; h < _instanceListSize; h++){
 			}
 		}
 		// If finished, wrap up
-		if (timer_check(_timer,true) && timer_get_active(_timer)){
+		if (timer_check(_timer) && timer_get_active(_timer)){
 			// Update "finished" count
 			_timer[? "TIMES_FINISHED"] += 1;
+			
+			// Update sequence completed
+			var _sequence = _timer[? "SEQUENCE"];
+			
+			var _curNode = _timer[? "SEQUENCE_NODE_CURRENT"];
+			_sequence[@ _curNode,fuwasequence.completed] = true;
+			_timer[? "SEQUENCE_NODE_CURRENT"] = min(timer_get_sequence_size(_timer) - 1,
+													_curNode + 1);
 		
 			// Run script
 			if (!is_undefined(_timer[? "SCRIPT"]) && instance_exists(_timer[? "SCRIPT_SCOPE"])){

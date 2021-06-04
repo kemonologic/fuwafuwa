@@ -3,7 +3,7 @@
 /// @arg {map} timer
 
 var _timer = argument[0];
-if (timer_check(_timer,true)){
+if (timer_check(_timer)){
 	exit;
 }
 

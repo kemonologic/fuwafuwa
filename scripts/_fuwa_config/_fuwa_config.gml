@@ -24,6 +24,12 @@ enum pingpongtype{
 	invertOnOdd // start normal, invert, then normal again
 }
 
+enum fuwasequence{
+	duration,
+	completed,
+	_SIZE
+}
+
 enum easetype{
 	none,
 	linear,

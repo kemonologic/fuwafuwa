@@ -775,6 +775,14 @@
             }
         },
         {
+            "Key": "c80b8f84-44d0-4cf9-80a1-85adf8ceac3a",
+            "Value": {
+                "id": "5e53363f-2a3b-4db7-9b05-a9913891e343",
+                "resourcePath": "scripts\\timer_get_sequence_curpos\\timer_get_sequence_curpos.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c96d386c-a304-4ae5-af44-ccf8ae1ea4ba",
             "Value": {
                 "id": "618f2384-d17c-40c4-9edd-0c2e5c10acdd",
@@ -1009,6 +1017,7 @@
         "f69ccb11-7e28-43e4-b847-cbe1920a2960",
         "38a3c281-e72e-412d-8d4c-16bc07080c6e",
         "985f60f4-221d-4367-bbf5-81334e867fd9",
+        "c80b8f84-44d0-4cf9-80a1-85adf8ceac3a",
         "6230c376-9051-44fb-8532-3d63ad9a0f4b",
         "c68153eb-8588-4f05-8630-63c2c22bc74c",
         "e1f21e29-e433-465a-89d0-48e8e3ab87ff",

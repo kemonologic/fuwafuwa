@@ -7,14 +7,19 @@
 var _time = argument[0];
 var _unit = time.ms;
 var _autoDestroy = true;
-var _sequence = [];
+var _sequence;
+_sequence[0, fuwasequence.duration] = 0;
+_sequence[0, fuwasequence.completed] = false;
 
 if (is_array(_time)){ // sequence
-	_sequence = _time;
-	_time = _sequence[0];
+	for (var i = 0; i < array_length_1d(_time); i++){
+		_sequence[i, fuwasequence.duration] = _time[i];
+		_sequence[i, fuwasequence.completed] = false;
+	}
+	_time = _sequence[0, fuwasequence.duration];
 }
 else{
-	_sequence[0] = _time;
+	_sequence[0, fuwasequence.duration] = _time;
 }
 	
 if (argument_count > 1){
@@ -86,6 +91,7 @@ var _timerNode = fuwa_ds_tree_build_node_value(
 														 "SCRIPT_SCOPE", id,
 														 "REPEAT", false,
 														 "SEQUENCE", _sequence,
+														 "SEQUENCE_NODE_CURRENT", 0,
 														 "RESTARTED_THIS_FRAME", false,
 														 "AUTODESTROY", _autoDestroy);
 								 
