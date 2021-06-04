@@ -9,4 +9,4 @@ var _nodePos = argument[1];
 
 var _sequence = _timer[? "SEQUENCE"];
 
-return (_nodePos >= timer_get_sequence_size(_timer)) ? _FUWA_EXIT_FAILURE : _sequence[_nodePos,fuwasequence.duration];
+return ((_nodePos < 0 || _nodePos >= timer_get_sequence_size(_timer))) ? _FUWA_EXIT_FAILURE : _sequence[_nodePos,fuwasequence.duration];
