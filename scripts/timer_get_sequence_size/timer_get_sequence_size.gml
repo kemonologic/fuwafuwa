@@ -3,4 +3,4 @@
 /// @desc Get the number of nodes in the sequence
 
 var _timer = argument[0];
-return array_length_1d(_timer[? "SEQUENCE"]);
+return array_height_2d(_timer[? "SEQUENCE"]);

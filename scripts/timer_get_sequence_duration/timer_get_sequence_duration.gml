@@ -11,8 +11,8 @@ if (timer_get_sequence_size(_timer) == 0){
 var _total = 0;
 var _sequence = _timer[? "SEQUENCE"];
 
-for (var i = 0; i < array_length_1d(_sequence); i++){
-	_total += _sequence[i];
+for (var i = 0; i < array_height_2d(_sequence); i++){
+	_total += _sequence[i,fuwasequence.duration];
 }
 
 return _total;

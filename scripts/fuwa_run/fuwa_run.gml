@@ -167,6 +167,11 @@ for (var h = 0; h < _instanceListSize; h++){
 		if (timer_check(_timer,true) && timer_get_active(_timer)){
 			// Update "finished" count
 			_timer[? "TIMES_FINISHED"] += 1;
+			var _sequence = _timer[? "SEQUENCE"];
+			_sequence[_timer[? "SEQUENCE_NODE_CURRENT"],fuwasequence.completed] = true;
+			
+			_timer[? "SEQUENCE_NODE_CURRENT"] = min(timer_get_sequence_size(_timer) - 1,
+													_timer[? "SEQUENCE_NODE_CURRENT"] + 1);
 		
 			// Run script
 			if (!is_undefined(_timer[? "SCRIPT"]) && instance_exists(_timer[? "SCRIPT_SCOPE"])){
