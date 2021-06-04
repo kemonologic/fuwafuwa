@@ -15,4 +15,4 @@ for (var i = 0; i < array_height_2d(_sequence); i++){
 	_total += _sequence[i,fuwasequence.duration];
 }
 
-return _total;
+return fuwa_convert_time_toexternal(_timer[? "UNIT"], _total);
