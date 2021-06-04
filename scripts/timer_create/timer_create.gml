@@ -13,8 +13,8 @@ _sequence[0, fuwasequence.completed] = false;
 
 if (is_array(_time)){ // sequence
 	for (var i = 0; i < array_length_1d(_time); i++){
-		_sequence[0, fuwasequence.duration] = _time[i];
-		_sequence[0, fuwasequence.completed] = false;
+		_sequence[i, fuwasequence.duration] = _time[i];
+		_sequence[i, fuwasequence.completed] = false;
 	}
 	_time = _sequence[0, fuwasequence.duration];
 }
