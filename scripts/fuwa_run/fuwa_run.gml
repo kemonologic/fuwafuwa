@@ -181,7 +181,7 @@ for (var h = 0; h < _instanceListSize; h++){
 			// Run script
 			if (!is_undefined(_timer[? "SCRIPT"]) && instance_exists(_timer[? "SCRIPT_SCOPE"])){
 				with (_timer[? "SCRIPT_SCOPE"]){
-					script_execute(_timer[? "SCRIPT"]);
+					fuwa_script_execute_ext(_timer[? "SCRIPT"],_timer[? "SCRIPT_ARGUMENTS"]);
 				}
 			}
 		
