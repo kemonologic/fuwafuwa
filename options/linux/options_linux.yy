@@ -23,8 +23,8 @@
     "option_linux_texture_page": "2048x2048",
     "option_linux_version": {
         "build": 1,
-        "major": 0,
-        "minor": 3,
+        "major": 1,
+        "minor": 1,
         "revision": 0
     }
 }
