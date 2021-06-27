@@ -8,7 +8,7 @@ var _timer = argument[0];
 var _clearRestartFlag = false;
 
 if (argument_count > 1){
-	_clearRestartFlag = argument[0];
+	_clearRestartFlag = argument[1];
 }
 
 if (!timer_get_paused(_timer)){
