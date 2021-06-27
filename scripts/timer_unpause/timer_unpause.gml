@@ -10,10 +10,10 @@ if (!timer_get_paused(_timer)){
 }
 
 var _clock = fuwa_get_timer_clock(_timer);
-var _remainingTime = _timer[? "TIME_END"] - _timer[? "TIME_CURRENT"];
+var _timePassed = _clock - _timer[? "TIME_CURRENT"];
 
-_timer[? "TIME_START"] = _clock;
+_timer[? "TIME_START"] += _timePassed;
 _timer[? "TIME_CURRENT"] = _clock;
-_timer[? "TIME_END"] = _clock + _remainingTime;
+_timer[? "TIME_END"] += _timePassed;
 
 _timer[? "PAUSED"] = false;
