@@ -15,13 +15,13 @@ for (var i = ds_list_size(_instanceList) - 1; i >= 0; i--){
 	var _instanceID = _instanceNode[? "INSTANCE"];
 	
 	if (!instance_exists(_instanceID)){ // If instance is gone...
+		var _timerList = _instanceNode[? "TIMER_LIST"];
 		if (_instanceNode[? "NUM_AUTODESTROY"] == ds_list_size(_timerList)){ // fast mode - all autodestroy
 			ds_map_destroy(_instanceNode); // Prune branch and timers underneath
 			ds_map_delete(_instanceMap,_instanceID); // Remove map entry
 			ds_list_delete(_instanceList,i);
 		}
 		else{
-			var _timerList = _instanceNode[? "TIMER_LIST"];
 			for (var j = ds_list_size(_timerList) - 1; j >= 0; j--){ // selective mode - only some autodestroy
 				var _timer = _timerList[| j];
 				if (_timer[? "AUTODESTROY"]){
