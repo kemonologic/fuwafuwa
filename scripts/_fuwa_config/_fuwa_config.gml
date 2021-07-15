@@ -1,5 +1,5 @@
 // ****** CONSTANTS ******
-#macro _FUWA_VERSION "1.1.2"
+#macro _FUWA_VERSION "1.1.3"
 #macro _FUWA_EXIT_FAILURE -1
 
 // ****** OPTIONS ******
