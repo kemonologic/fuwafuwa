@@ -168,6 +168,13 @@ for (var h = 0; h < _instanceListSize; h++){
 			// Update "finished" count
 			_timer[? "TIMES_FINISHED"] += 1;
 			
+			// Run script
+			if (!is_undefined(_timer[? "SCRIPT"]) && instance_exists(_timer[? "SCRIPT_SCOPE"])){
+				with (_timer[? "SCRIPT_SCOPE"]){
+					fuwa_script_execute_ext(_timer[? "SCRIPT"],_timer[? "SCRIPT_ARGUMENTS"]);
+				}
+			}
+			
 			// Update sequence completed
 			var _sequence = _timer[? "SEQUENCE"];
 			
@@ -178,12 +185,7 @@ for (var h = 0; h < _instanceListSize; h++){
 													_curNode + 1);
 													
 		
-			// Run script
-			if (!is_undefined(_timer[? "SCRIPT"]) && instance_exists(_timer[? "SCRIPT_SCOPE"])){
-				with (_timer[? "SCRIPT_SCOPE"]){
-					fuwa_script_execute_ext(_timer[? "SCRIPT"],_timer[? "SCRIPT_ARGUMENTS"]);
-				}
-			}
+
 		
 			// Reset timer to start time if repeats
 			if (timer_get_repeat(_timer)){
