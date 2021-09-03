@@ -10,4 +10,4 @@ var _shift = argument[1];
 _timer[? "TIME_START"] = _timer[? "TIME_START"] + fuwa_convert_time_tointernal(_timer[? "UNIT"],_shift);
 _timer[? "TIME_END"] = _timer[? "TIME_END"] + fuwa_convert_time_tointernal(_timer[? "UNIT"],_shift);
 
-
+fuwa_update_sequence_duration(_timer);
