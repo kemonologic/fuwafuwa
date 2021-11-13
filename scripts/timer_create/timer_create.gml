@@ -34,7 +34,9 @@ if (_FUWA_OPTIONS_DISABLE_AUTODESTROY){
 
 // Force time to always be an array for cleaner code
 if (!is_array(_time)){
-	_time[0] = _time;
+	var _tmpArr; 
+	_tmpArr[0] = _time;
+	_time = _tmpArr;
 }
 
 // Convert to internal units and set up sequence
