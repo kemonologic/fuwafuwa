@@ -8,4 +8,4 @@ var _duration = argument[1];
 
 _timer[? "TIME_END"] = _timer[? "TIME_START"] + fuwa_convert_time_tointernal(_timer[? "UNIT"], _duration);
 
-
+fuwa_update_sequence_duration(_timer);

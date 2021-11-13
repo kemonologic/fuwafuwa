@@ -11,16 +11,7 @@ var _sequence;
 _sequence[0, fuwasequence.duration] = 0;
 _sequence[0, fuwasequence.completed] = false;
 
-if (is_array(_time)){ // sequence
-	for (var i = 0; i < array_length_1d(_time); i++){
-		_sequence[i, fuwasequence.duration] = _time[i];
-		_sequence[i, fuwasequence.completed] = false;
-	}
-	_time = _sequence[0, fuwasequence.duration];
-}
-else{
-	_sequence[0, fuwasequence.duration] = _time;
-}
+
 	
 if (argument_count > 1){
 	var _argument = argument[1];
@@ -40,27 +31,31 @@ if (_FUWA_OPTIONS_DISABLE_AUTODESTROY){
 	_autoDestroy = false;
 }
 
-//var _timerTree = global._fuwa_timerTree;
-var _instanceList = global._fuwa_instanceList;
-var _instanceMap = global._fuwa_instanceMap;
 
-var _gameFPS = _FUWA_OPTIONS_FRAMERATE;
-
-switch (_unit){
-	case time.s:
-		_time *= 1000;
-		//_unit = time.s;
-		break;
-	case time.msframes:
-		_time = (_time / 1000) * _gameFPS;
-		//_unit = time.frames;
-		break;
-	case time.sframes:
-		_time = _time * _gameFPS;
-		//_unit = time.frames;
-		break;
+// Force time to always be an array for cleaner code
+if (!is_array(_time)){
+	var _tmpArr; 
+	_tmpArr[0] = _time;
+	_time = _tmpArr;
 }
 
+// Convert to internal units and set up sequence
+var _gameFPS = _FUWA_OPTIONS_FRAMERATE;
+for (var i = 0; i < array_length_1d(_time); i++){
+	switch (_unit){
+		case time.s:
+			_time[i] *= 1000;
+			break;
+		case time.msframes:
+			_time[i] = (_time[i] / 1000) * _gameFPS;
+			break;
+		case time.sframes:
+			_time[i] = _time[i] * _gameFPS;
+			break;
+	}
+	_sequence[i, fuwasequence.duration] = _time[i];
+	_sequence[i, fuwasequence.completed] = false;
+}
 
 var _isFrameLocked = (_unit == time.frames) || (_unit == time.sframes) || (_unit == time.msframes);
 
@@ -69,7 +64,7 @@ var _timeEnd = 0;
 var _timeCurrent = 0;
 
 _timeStart = _isFrameLocked ? fuwa_get_clockframes() : fuwa_get_clocktime();
-_timeEnd = _timeStart + _time;
+_timeEnd = _timeStart + _time[0];
 _timeCurrent = _timeStart;
 
 var _timerNode = fuwa_ds_tree_build_node_value(			 
@@ -99,6 +94,8 @@ var _timerNode = fuwa_ds_tree_build_node_value(
 								 
 
 
+var _instanceList = global._fuwa_instanceList;
+var _instanceMap = global._fuwa_instanceMap;
 var _instanceNode = undefined;
 var _timerList = undefined;
 if (!ds_map_exists(_instanceMap,id)){
