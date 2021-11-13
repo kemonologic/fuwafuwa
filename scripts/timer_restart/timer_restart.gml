@@ -13,7 +13,7 @@ var _sequence = _timer[? "SEQUENCE"];
 var _currentNode = _timer[? "SEQUENCE_NODE_CURRENT"];
 _timerInterval = _sequence[_currentNode,fuwasequence.duration];
 
-_timerInterval = fuwa_convert_time_tointernal(_timer[? "UNIT"], _timerInterval); 
+_timerInterval = _timerInterval; 
 
 _timer[? "TIME_START"] = _clock;
 _timer[? "TIME_END"] = _clock + _timerInterval;
