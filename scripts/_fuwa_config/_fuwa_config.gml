@@ -35,6 +35,12 @@ enum fuwasequence{
 	_SIZE
 }
 
+enum fuwaevent{
+	onComplete, // Timer node is completed
+	onResume, // Timer node is resumed
+	onHalt // Timer node is stopped or paused
+}
+
 enum easetype{
 	none,
 	linear,
