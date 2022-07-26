@@ -418,7 +418,7 @@
             "Key": "76157cf1-318b-4a89-8b0d-510f40dd201d",
             "Value": {
                 "id": "109b2fef-54ba-4f1c-954a-6cbedf56a6f2",
-                "resourcePath": "scripts\\timer_create_paused\\timer_create_paused.yy",
+                "resourcePath": "scripts\\timer_create_stopped\\timer_create_stopped.yy",
                 "resourceType": "GMScript"
             }
         },
