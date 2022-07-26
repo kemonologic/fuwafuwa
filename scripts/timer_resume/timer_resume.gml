@@ -25,3 +25,10 @@ _timer[? "TIME_END"] += _timePassed;
 _timer[? "PAUSED"] = false;
 
 _timer[? "RESTARTED_THIS_FRAME"] = _clearRestartFlag ? false : _timer[? "RESTARTED_THIS_FRAME"];
+
+// Run script
+if (!is_undefined(_timer[? "SCRIPT_RESUME"]) && instance_exists(_timer[? "SCRIPT_RESUME_SCOPE"])){
+	with (_timer[? "SCRIPT_RESUME_SCOPE"]){
+		fuwa_script_execute_ext(_timer[? "SCRIPT_RESUME"],_timer[? "SCRIPT_RESUME_ARGUMENTS"]);
+	}
+}

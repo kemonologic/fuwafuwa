@@ -5,5 +5,5 @@
 
 var _timer = argument[0];
 
-timer_pause(_timer);
 timer_restart(_timer);
+timer_pause(_timer);
