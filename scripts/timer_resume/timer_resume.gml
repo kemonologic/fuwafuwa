@@ -1,5 +1,5 @@
-/// @func timer_unpause
-/// @desc {void} Unpause a paused timer.
+/// @func timer_resume
+/// @desc {void} Resume a paused or stopped timer.
 /// @desc		 The end time is adjusted to keep the timer the same duration as when it was paused.
 /// @arg {map} timer
 /// @arg {bool*} clearRestartFlag

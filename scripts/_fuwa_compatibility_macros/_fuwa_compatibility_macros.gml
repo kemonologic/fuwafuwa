@@ -1,0 +1,2 @@
+#macro timer_unpause timer_resume
+#macro timer_create_paused timer_create_stopped
