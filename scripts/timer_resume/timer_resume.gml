@@ -2,13 +2,13 @@
 /// @desc {void} Resume a paused or stopped timer.
 /// @desc		 The end time is adjusted to keep the timer the same duration as when it was paused.
 /// @arg {map} timer
-/// @arg {bool*} clearRestartFlag
+/// @arg {bool*} clearRepeatFlag
 
 var _timer = argument[0];
-var _clearRestartFlag = false;
+var _clearRepeatFlag = false;
 
 if (argument_count > 1){
-	_clearRestartFlag = argument[1];
+	_clearRepeatFlag = argument[1];
 }
 
 if (!timer_get_paused(_timer)){
@@ -24,7 +24,7 @@ _timer[? "TIME_END"] += _timePassed;
 
 _timer[? "PAUSED"] = false;
 
-_timer[? "RESTARTED_THIS_FRAME"] = _clearRestartFlag ? false : _timer[? "RESTARTED_THIS_FRAME"];
+_timer[? "REPEATED_THIS_FRAME"] = _clearRepeatFlag ? false : _timer[? "REPEATED_THIS_FRAME"];
 
 // Run script
 if (!is_undefined(_timer[? "SCRIPT_RESUME"]) && instance_exists(_timer[? "SCRIPT_RESUME_SCOPE"])){

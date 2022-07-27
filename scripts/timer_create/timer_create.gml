@@ -95,7 +95,7 @@ var _timerNode = fuwa_ds_tree_build_node_value(
 														 "SEQUENCE", _sequence,
 														 "SEQUENCE_NODE_CURRENT", 0,
 														 "SEQUENCE_NODE_LAST", 0,
-														 "RESTARTED_THIS_FRAME", false,
+														 "REPEATED_THIS_FRAME", false,
 														 "AUTODESTROY", _autoDestroy);
 								 
 

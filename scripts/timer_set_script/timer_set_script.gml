@@ -43,7 +43,7 @@ switch (_eventType){
 		_key = "SCRIPT_HALT";
 		break;			
 }
-
+	
 _timer[? _key] = _executeScript;
 _timer[? _key + "_SCOPE"] = _scopeInstance;
 _timer[? _key + "_ARGUMENTS"] = _argumentArray;

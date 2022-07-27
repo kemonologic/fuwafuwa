@@ -46,7 +46,7 @@ for (var h = 0; h < _instanceListSize; h++){
 		}
 		
 		// Active timer, so update
-		_timer[? "RESTARTED_THIS_FRAME"] = false;
+		_timer[? "REPEATED_THIS_FRAME"] = false;
 
 		// Update current time
 		_timer[? "TIME_CURRENT"] = _clock;
@@ -190,7 +190,7 @@ for (var h = 0; h < _instanceListSize; h++){
 			// Reset timer to start time if repeats
 			if (timer_get_repeat(_timer)){
 				timer_restart(_timer);
-				_timer[? "RESTARTED_THIS_FRAME"] = true;
+				_timer[? "REPEATED_THIS_FRAME"] = true;
 			}
 			else{
 				_timer[? "ACTIVE"] = false;
