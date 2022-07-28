@@ -16,7 +16,7 @@ var _eventType = fuwaevent.onComplete;
 
 if (argument_count == 4){
 	var _optArg = argument[3];
-	if (instance_exists(_optArg)){
+	if (real(_optArg) >= 100000){ // instance ID
 		_scopeInstance = _optArg;
 	}
 	else{
