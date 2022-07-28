@@ -11,7 +11,7 @@ if (argument_count > 1){
 	_clearRepeatFlag = argument[1];
 }
 
-if (!timer_get_paused(_timer)){
+if (!timer_get_halted(_timer)){
 	return _FUWA_EXIT_FAILURE;
 }
 

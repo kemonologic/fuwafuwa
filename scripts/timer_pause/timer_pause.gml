@@ -5,7 +5,7 @@
 
 var _timer = argument[0];
 
-if (timer_get_paused(_timer)){
+if (timer_get_halted(_timer)){
 	return _FUWA_EXIT_FAILURE;
 }
 
