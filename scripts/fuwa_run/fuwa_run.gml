@@ -25,7 +25,7 @@ for (var h = 0; h < _instanceListSize; h++){
 	for (var i = 0; i < _instanceTimerListSize; i++){
 		var _timer = _instanceTimerList[| i];
 		
-		var _timerPaused = timer_get_paused(_timer);
+		var _timerPaused = timer_get_halted(_timer);
 		var _timerActive = timer_get_active(_timer);	
 		
 		var _isFrameLocked = timer_get_framelocked(_timer);
@@ -46,7 +46,7 @@ for (var h = 0; h < _instanceListSize; h++){
 		}
 		
 		// Active timer, so update
-		_timer[? "RESTARTED_THIS_FRAME"] = false;
+		_timer[? "REPEATED_THIS_FRAME"] = false;
 
 		// Update current time
 		_timer[? "TIME_CURRENT"] = _clock;
@@ -190,7 +190,7 @@ for (var h = 0; h < _instanceListSize; h++){
 			// Reset timer to start time if repeats
 			if (timer_get_repeat(_timer)){
 				timer_restart(_timer);
-				_timer[? "RESTARTED_THIS_FRAME"] = true;
+				_timer[? "REPEATED_THIS_FRAME"] = true;
 			}
 			else{
 				_timer[? "ACTIVE"] = false;

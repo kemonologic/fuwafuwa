@@ -1,5 +1,5 @@
 // ****** CONSTANTS ******
-#macro _FUWA_VERSION "1.1.4"
+#macro _FUWA_VERSION "1.2.0"
 #macro _FUWA_EXIT_FAILURE -1
 
 // ****** OPTIONS ******
@@ -33,6 +33,12 @@ enum fuwasequence{
 	duration,
 	completed,
 	_SIZE
+}
+
+enum fuwaevent{
+	onComplete, // Timer node is completed
+	onResume, // Timer node is resumed
+	onHalt // Timer node is stopped or paused
 }
 
 enum easetype{

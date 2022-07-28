@@ -22,7 +22,7 @@ if (argument_count > 1){
 var _timerFinished = false;
 
 if (_nodePos == -1 || _nodePos == _timer[? "SEQUENCE_NODE_CURRENT"]){
-	_timerFinished = (_timer[? "TIME_END"] <= _timer[? "TIME_CURRENT"]) || _timer[? "RESTARTED_THIS_FRAME"];  // fi
+	_timerFinished = (_timer[? "TIME_END"] <= _timer[? "TIME_CURRENT"]) || _timer[? "REPEATED_THIS_FRAME"];  // fi
 }
 else{
 	var _sequence = _timer[? "SEQUENCE"];

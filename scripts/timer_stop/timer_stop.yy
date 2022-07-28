@@ -1,8 +1,8 @@
 {
-    "id": "76157cf1-318b-4a89-8b0d-510f40dd201d",
+    "id": "f25ac4f3-45eb-4c72-9247-ecfd2fbf7507",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "timer_create_paused",
+    "name": "timer_stop",
     "IsCompatibility": false,
     "IsDnD": false
 }

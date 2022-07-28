@@ -85,11 +85,17 @@ var _timerNode = fuwa_ds_tree_build_node_value(
 														 "SCRIPT", undefined,
 														 "SCRIPT_SCOPE", id,
 														 "SCRIPT_ARGUMENTS", [],
+														 "SCRIPT_RESUME", undefined,
+														 "SCRIPT_RESUME_SCOPE", id,
+														 "SCRIPT_RESUME_ARGUMENTS", [],
+														 "SCRIPT_HALT", undefined,
+														 "SCRIPT_HALT_SCOPE", id,
+														 "SCRIPT_HALT_ARGUMENTS", [],
 														 "REPEAT", false,
 														 "SEQUENCE", _sequence,
 														 "SEQUENCE_NODE_CURRENT", 0,
 														 "SEQUENCE_NODE_LAST", 0,
-														 "RESTARTED_THIS_FRAME", false,
+														 "REPEATED_THIS_FRAME", false,
 														 "AUTODESTROY", _autoDestroy);
 								 
 

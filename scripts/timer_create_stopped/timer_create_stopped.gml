@@ -1,5 +1,5 @@
-/// @func timer_create_paused
-/// @desc {map} Creates a paused timer and returns a reference.
+/// @func timer_create_stopped
+/// @desc {map} Creates a stopped timer and returns a reference.
 /// @arg {real} time
 /// @arg {enum*} unit
 /// @arg {bool*} autoDestroy 

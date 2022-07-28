@@ -15,7 +15,7 @@ for (var i = 0; i < _size; i++){
 		 i == _timer[? "SEQUENCE_NODE_LAST"] && 
 		 i == _timer[? "SEQUENCE_NODE_CURRENT"] && 
 		 _sequence[i, fuwasequence.completed] == false){ 
-			 _completedNodes += _timer[? "RESTARTED_THIS_FRAME"]; // allow it to fire on the restart frame
+			 _completedNodes += _timer[? "REPEATED_THIS_FRAME"]; // allow it to fire on the restart frame
 	}
 }
 
