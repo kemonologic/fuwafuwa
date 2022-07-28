@@ -8,10 +8,10 @@ if (argument_count > 0) {
 }
 
 var _callStackArr = debug_get_callstack();
-var _excludedScripts = ds_list_create();
+//var _excludedScripts = ds_list_create();
 
 // Add scripts to exclude here
-ds_list_add(_excludedScripts, "fuwa_script_called","script_called", "fTrace", "fuwa_trace", "show_debug_message");
+var _excludedScriptsArr = ["fuwa_script_called", "fuwa_trace", "script_called", "fTrace", "show_debug_message"];
 
 for (var i = 0; i < array_length_1d(_callStackArr); i++) {
 	var _wasExcluded = false;
@@ -21,11 +21,10 @@ for (var i = 0; i < array_length_1d(_callStackArr); i++) {
 	var _scrStrLen = string_length(_scrNice);
 	var _scrLineNumIndex = string_pos(":", _scrNice);
 	var _scrNoLineNum = string_delete(_scrNice, _scrLineNumIndex, _scrStrLen - _scrLineNumIndex + 1);
-	_wasExcluded = (ds_list_find_index(_excludedScripts, _scrNoLineNum) != -1);
-	
-	if (!_wasExcluded) {
+	for (var j = 0; j < array_length_1d(_excludedScriptsArr); j++){
+		_wasExcluded |= (_excludedScriptsArr[j] == _scrNoLineNum);
+	}
+	if (!_wasExcluded){
 		return _includeLineNum ? _scrNice : _scrNoLineNum;
 	}
 }
-
-ds_list_destroy(_excludedScripts);
