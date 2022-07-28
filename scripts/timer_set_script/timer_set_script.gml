@@ -28,9 +28,6 @@ else if (argument_count == 5){
 	_eventType = argument[4];
 }
 
-if (!script_exists(_executeScript)){
-	return _FUWA_EXIT_FAILURE;
-}
 
 switch (_eventType){
 	case fuwaevent.onComplete:
@@ -44,6 +41,18 @@ switch (_eventType){
 		break;			
 }
 	
+
+if (!script_exists(_executeScript)){
+	if (real(_executeScript) != -1){
+		return _FUWA_EXIT_FAILURE;
+	}
+	else{
+		_executeScript = undefined;
+		_scopeInstance = id;
+		_argumentArray = [];
+	}
+}
+
 _timer[? _key] = _executeScript;
 _timer[? _key + "_SCOPE"] = _scopeInstance;
 _timer[? _key + "_ARGUMENTS"] = _argumentArray;
