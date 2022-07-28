@@ -1,5 +1,5 @@
-/// @func timer_get_paused
-/// @desc {script} Returns if timer is paused.
+/// @func timer_get_halted
+/// @desc {script} Returns if timer is halted.
 /// @arg {map} timer
 
 var _timer = argument[0];

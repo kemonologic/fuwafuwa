@@ -426,7 +426,7 @@
             "Key": "7c073893-3c2a-46c8-85c3-28b483f5ceff",
             "Value": {
                 "id": "ce1fc93e-0f44-46fb-b085-fa16b4c092b2",
-                "resourcePath": "scripts\\timer_get_paused\\timer_get_paused.yy",
+                "resourcePath": "scripts\\timer_get_halted\\timer_get_halted.yy",
                 "resourceType": "GMScript"
             }
         },
